@@ -37,11 +37,10 @@ import javax.naming.NamingException;
 import org.jboss.sasl.JBossSaslProvider;
 
 public class JmsClient {
-	String remoting;
-	
-	static {
-	   Security.addProvider(new JBossSaslProvider());
-	}
+	protected String remoting;
+	//static {
+	//   Security.addProvider(new JBossSaslProvider());
+	//}
 	
 	public JmsClient(String remoting){
 		this.remoting = remoting;
@@ -74,15 +73,16 @@ public class JmsClient {
     public void setupJMSConnection() throws JMSException, NamingException
     {
     	Properties jndiProps = new Properties();
-    	jndiProps.put(InitialContext.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+    	jndiProps.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming");
     	//jndiProps.put(InitialContext.PROVIDER_URL, "remote://3f8f5f57ac-bdecoste92.dev.rhcloud.com:35545");
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
+    	System.out.println("!!!!!!!! remoting " + remoting);
     	InitialContext context = new InitialContext(jndiProps);
     	
-    	System.out.println("!!!!!!!! props " + jndiProps);
+    	System.out.println("!!!!!!!! props " + context.getEnvironment());
     	
-    	ConnectionFactory cf = (ConnectionFactory) context.lookup("jms/RemoteConnectionFactory");
-    	queue = (Queue) context.lookup("jms/queue/test");
+    	ConnectionFactory cf = (ConnectionFactory) context.lookup("java:jboss/exported/jms/RemoteConnectionFactory");
+    	queue = (Queue) context.lookup("java:jboss/exported/jms/queue/test");
     	conn = cf.createConnection("guest", "guest");
     	session = conn.createSession(false, QueueSession.AUTO_ACKNOWLEDGE);
     	conn.start();

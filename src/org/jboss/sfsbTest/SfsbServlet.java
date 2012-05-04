@@ -75,12 +75,12 @@ public class SfsbServlet extends HttpServlet {
 	    	System.out.println("HTTPSession sfsb " + sfsb);
 	    	
 	    	if (sfsb == null) {
-	    		String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote";
+	    		String jndiBinding = "java:global/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote";
 	    		sfsb = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
 	    		session.setAttribute(SFSB, sfsb);    		
 	    	}
 	    	
-	    	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
+	    	String jndiBinding = "java:global/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
 	    	StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
     	
 	    	System.out.println("State1 " + sfsb.getState());
@@ -113,7 +113,7 @@ public class SfsbServlet extends HttpServlet {
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://127.0.250.1:4447");
     	InitialContext jndiContext = new InitialContext(jndiProps);
     	
-    	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote";
+    	String jndiBinding = "java:global/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote";
     	StatefulBean1Remote sfsb = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
     }
 
