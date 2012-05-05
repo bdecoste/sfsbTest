@@ -2,6 +2,7 @@ package org.jboss.sfsbTest;
 
 import javax.jms.Message;
 import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 
@@ -14,8 +15,11 @@ public class TestMDB implements MessageListener {
 
 	@Override
 	public void onMessage(Message message) {
-		System.out.println("Received JMS Message " + message);
-
+		try {
+			System.out.println("Received JMS Message " + ((TextMessage)message).getText());
+		} catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 
 }

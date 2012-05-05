@@ -6,6 +6,8 @@ import java.util.StringTokenizer;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.NameClassPair;
+import javax.naming.NamingEnumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +19,7 @@ import org.jboss.jndiTest.EntityTester;
 import org.jboss.jndiTest.StatefulBean1;
 import org.jboss.jndiTest.StatefulBean1Local;
 import org.jboss.jndiTest.StatefulBean1Remote;
+import org.jboss.jndiTest.StatelessBean1Remote;
 import org.jboss.jndiTest.TestEntity;
 
 /**
@@ -58,11 +61,13 @@ public class SfsbServlet extends HttpServlet {
 	    	
 			String remotings = System.getenv("OPENSHIFT_JBOSS_CLUSTER_REMOTING");
 			
+			for (int i = 0 ; i < 5 ; ++i) {
 			StringTokenizer tokenizer = new StringTokenizer(remotings, ",");
 			
 			while (tokenizer.hasMoreTokens()){
 				String remoting = tokenizer.nextToken();
 				runTest(session, remoting);
+			}
 			}
 		} catch (Exception e){
     		e.printStackTrace();
@@ -70,7 +75,17 @@ public class SfsbServlet extends HttpServlet {
     	}
 	}
 	
+	protected void viewJndi(Context ctx, String path) throws Exception {
+		System.out.println("pair '" + path + "'");
+		NamingEnumeration<NameClassPair> enumeration = ctx.list(path);
+		while (enumeration.hasMoreElements()){
+			NameClassPair pair = enumeration.next();
+			System.out.println("  " + pair.getName() + " " + pair.getClassName());
+		}
+	}
+	
 	protected void runTest(HttpSession session, String remoting) throws Exception {
+		System.out.println("-------------------------------");
     	Properties props = new Properties();
       
     	Properties jndiProps = new Properties();
@@ -78,6 +93,9 @@ public class SfsbServlet extends HttpServlet {
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
     	InitialContext jndiContext = new InitialContext(jndiProps);
     	System.out.println("!!! jndi props " + jndiContext.getEnvironment());
+    	viewJndi(jndiContext, "");
+    	viewJndi(jndiContext, "queue");
+    	viewJndi(jndiContext, "ejb");
     	
     	String state = (String)session.getAttribute(STATE);
     	System.out.println("HTTPSession state " + state);
@@ -89,13 +107,26 @@ public class SfsbServlet extends HttpServlet {
     	System.out.println("HTTPSession sfsb " + sfsb);
     	
     	if (sfsb == null) {
-    		String jndiBinding = "java:global/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote";
+    		String jndiBinding = "ejb:/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
     		sfsb = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
     		session.setAttribute(SFSB, sfsb);    		
+    	} else {
+    		String jndiBinding = "ejb:/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
+    		StatefulBean1Remote remote = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
+    		System.out.println("Calling remote setState");
+    		remote.setState("REMOTE");
     	}
     	
     	String jndiBinding = "java:global/sfsbTest-1.0/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
     	StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
+    	System.out.println("local bean " + local);
+    	
+    	jndiBinding = "ejb:/sfsbTest-1.0/StatelessBean1!org.jboss.jndiTest.StatelessBean1Remote";
+    	StatelessBean1Remote stateless = (StatelessBean1Remote) jndiContext.lookup(jndiBinding);
+    	System.out.println("stateless bean " + stateless);
+    	for (int i = 0 ; i < 5 ; ++i){
+    		stateless.call();
+    	}
 	
     	System.out.println("State1 " + sfsb.getState());
     	sfsb.setState("MODIFIED");
@@ -110,8 +141,6 @@ public class SfsbServlet extends HttpServlet {
         String msg = "Testing123";
 
         sm.sendMessageOverJMS(msg);
-        
-        System.out.println("JMS message sent");
 	}
 	
 	public static void main(String args[]) throws Throwable

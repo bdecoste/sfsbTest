@@ -31,6 +31,7 @@ import javax.jms.ObjectMessage;
 import javax.jms.Queue;
 import javax.jms.QueueSession;
 import javax.jms.Session;
+import javax.jms.TextMessage;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -56,12 +57,13 @@ public class JmsClient {
 
     	setupJMSConnection();
         try {
-            ObjectMessage tm = null;
+            TextMessage tm = null;
 
             producer = session.createProducer(queue);
-            tm = session.createObjectMessage(message);
-            tm.setStringProperty(PROPERTY, "Testing123");
+            tm = session.createTextMessage();
+            tm.setText(Long.toString(System.currentTimeMillis()));
             producer.send(tm);
+            System.out.println("JMS message sent " + tm.getText());
         } finally {
             if(producer != null) {
             	producer.close();
@@ -74,7 +76,6 @@ public class JmsClient {
     {
     	Properties jndiProps = new Properties();
     	jndiProps.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming");
-    	//jndiProps.put(InitialContext.PROVIDER_URL, "remote://3f8f5f57ac-bdecoste92.dev.rhcloud.com:35545");
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
     	System.out.println("!!!!!!!! remoting " + remoting);
     	InitialContext context = new InitialContext(jndiProps);
@@ -98,7 +99,7 @@ public class JmsClient {
     public static void main(String args[]) throws Throwable
     {        	    	
     	JmsClient sm = new JmsClient("");
-        String msg = "Testing123";
+        String msg = Long.toString(System.currentTimeMillis());
 
         sm.sendMessageOverJMS(msg);
     }
