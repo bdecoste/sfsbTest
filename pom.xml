@@ -13,6 +13,36 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
@@ -21,13 +51,13 @@
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
-                <dependency>
+		<dependency>
 			<groupId>org.jboss.ejb3</groupId>
 			<artifactId>jboss-ejb3-ext-api</artifactId>
 			<version>2.0.0-redhat-1</version>
 			<scope>provided</scope>
 		</dependency>
-                <dependency>
+		<dependency>
 			<groupId>org.jboss.sasl</groupId>
 			<artifactId>jboss-sasl</artifactId>
 			<version>1.0.0.Final</version>
