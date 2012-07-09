@@ -31,13 +31,13 @@ import org.jboss.ejb3.annotation.SecurityDomain;
 
 @Stateless
 @Remote(EntityTester.class)
-@SecurityDomain("alfa-db")
+//@SecurityDomain("alfa-db")
 public class EntityTesterBean implements EntityTester
 {
 	
    private @PersistenceContext(unitName="jpa-test") EntityManager manager;
    
-   @RolesAllowed("dummyRole")
+//   @RolesAllowed("dummyRole")
    public void createEntity(long id){
 	   TestEntity t = new TestEntity();
 	   t.setId(id);

@@ -132,10 +132,11 @@ public class SfsbServlet extends HttpServlet {
     	sfsb.setState("MODIFIED");
     	System.out.println("State2 " + sfsb.getState());
     	
-    	//jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
-    	//EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
-    	//tester.createEntity(1);
-    	//tester.findEntity(1);
+    	long id = System.currentTimeMillis();
+    	jndiBinding = "java:global/sfsbTest-1.0/EntityTesterBean!org.jboss.jndiTest.EntityTester";
+    	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
+    	tester.createEntity(id);
+    	tester.findEntity(id);
     	
     	JmsClient sm = new JmsClient(remoting);
         String msg = "Testing123";
