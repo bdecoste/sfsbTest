@@ -4,19 +4,19 @@
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar" sourcepath="M2_REPO/javax/activation/activation/1.1/activation-1.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar" sourcepath="M2_REPO/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" sourcepath="M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1.jar" sourcepath="M2_REPO/javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.4.2/mail-1.4.2.jar" sourcepath="M2_REPO/javax/mail/mail/1.4.2/mail-1.4.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2.jar" sourcepath="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.0.Final/jboss-annotations-api_1.1_spec-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.0.Final/jboss-annotations-api_1.1_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.0.Final/jboss-annotations-api_1.1_spec-1.0.0.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/resource/jboss-connector-api_1.5_spec/1.0.0.Final/jboss-connector-api_1.5_spec-1.0.0.Final.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.0.Final/jboss-ejb-api_3.1_spec-1.0.0.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/el/jboss-el-api_2.2_spec/1.0.0.Final/jboss-el-api_2.2_spec-1.0.0.Final.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Final/jboss-interceptors-api_1.1_spec-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Final/jboss-interceptors-api_1.1_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Final/jboss-interceptors-api_1.1_spec-1.0.0.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/security/jacc/jboss-jacc-api_1.4_spec/1.0.0.Final/jboss-jacc-api_1.4_spec-1.0.0.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.0.Final/jboss-servlet-api_3.0_spec-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.0.Final/jboss-servlet-api_3.0_spec-1.0.0.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/spec/javax/enterprise/deploy/jboss-jad-api_1.2_spec/1.0.0.Final/jboss-jad-api_1.2_spec-1.0.0.Final.jar"/>
@@ -33,6 +33,6 @@
   <classpathentry kind="var" path="M2_REPO/org/jboss/resteasy/jaxrs-api/2.1.0.GA/jaxrs-api-2.1.0.GA.jar"/>
   <classpathentry kind="var" path="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jboss/ejb3/jboss-ejb3-ext-api/2.0.0/jboss-ejb3-ext-api-2.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/jboss/sasl/jboss-sasl/1.0.0.Final/jboss-sasl-1.0.0.Final.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/sasl/jboss-sasl/1.0.0.Final/jboss-sasl-1.0.0.Final.jar" sourcepath="M2_REPO/org/jboss/sasl/jboss-sasl/1.0.0.Final/jboss-sasl-1.0.0.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar" sourcepath="M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA-sources.jar"/>
 </classpath>
