@@ -14,7 +14,7 @@ public class TestEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private long id;
-	private String value;
+	private long value;
 
 	public TestEntity() {
 		super();
@@ -30,11 +30,11 @@ public class TestEntity implements Serializable {
 		this.id = id;
 	}
 	
-	public String getValue(){
+	public long getValue(){
 		return value;
 	}
 	
-	public void setValue(String value){
+	public void setValue(long value){
 		this.value = value;
 	}
    

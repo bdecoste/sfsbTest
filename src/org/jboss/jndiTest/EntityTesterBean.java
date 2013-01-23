@@ -38,18 +38,23 @@ public class EntityTesterBean implements EntityTester
    private @PersistenceContext(unitName="jpa-test") EntityManager manager;
    
 //   @RolesAllowed("dummyRole")
-   public void createEntity(long id){
+   public TestEntity createEntity(long id, long value){
 	   TestEntity t = new TestEntity();
 	   t.setId(id);
+	   t.setValue(value);
 	   manager.persist(t);
 	   
 	   System.out.println("!!!!! persisted " + id);
+	   
+	   return t;
    }
 	
-   public void findEntity(long id){
+   public TestEntity findEntity(long id){
 	   TestEntity t = manager.find(TestEntity.class, id);
 	      
 	   System.out.println("!!!!!!! Found entity " + t);
+	   
+	   return t;
 	   
    }
 }

@@ -4,6 +4,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.Provider;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NameClassPair;
@@ -22,6 +28,8 @@ import org.jboss.jndiTest.StatefulBean1Remote;
 import org.jboss.jndiTest.StatelessBean1Remote;
 import org.jboss.jndiTest.TestEntity;
 
+import org.apache.log4j.*;
+
 /**
  * Servlet implementation class SfsbServlet
  */
@@ -32,6 +40,8 @@ public class SfsbServlet extends HttpServlet {
 	private static final String STATE = "STATE";
 	private static final String SFSB = "SFSB";
 	private static final String MODIFIED = "MODIFIED";
+	
+	Logger LOG = Logger.getLogger(SfsbServlet.class); 
 
     /**
      * Default constructor. 
@@ -58,17 +68,28 @@ public class SfsbServlet extends HttpServlet {
 	
 	protected void callSfsb(HttpSession session) throws ServletException {
 		try {
+			
+			LOG.info("########################### callSfsb ########################");
 	    	
-			String remotings = System.getenv("OPENSHIFT_JBOSS_CLUSTER_REMOTING");
+			String remotings = System.getenv("OPENSHIFT_JBOSSAS_CLUSTER_REMOTING");
+			System.out.println("remotings " + remotings);
 			
-			for (int i = 0 ; i < 5 ; ++i) {
-			StringTokenizer tokenizer = new StringTokenizer(remotings, ",");
+	/*	    for (int i = 0 ; i < 10 ; ++i) {
+				StringTokenizer tokenizer = new StringTokenizer(remotings, ",");
+				
+				while (tokenizer.hasMoreTokens()){
+					String remoting = tokenizer.nextToken();
+					runTest(session, remoting);
+				}
+			} */
 			
-			while (tokenizer.hasMoreTokens()){
-				String remoting = tokenizer.nextToken();
-				runTest(session, remoting);
-			}
-			}
+			for (int i = 0 ; i < 20 ; ++i)
+				runTest(session, "localhost:5445");
+			
+//			runTest(session, "be673bcb5b-bdecoste26e.dev.rhcloud.com[35545]");
+//			runTest(session, "scaledas7-bdecoste26e.dev.rhcloud.com[35540]");
+			
+			//testMail();
 		} catch (Exception e){
     		e.printStackTrace();
     		throw new ServletException(e);
@@ -93,11 +114,11 @@ public class SfsbServlet extends HttpServlet {
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
     	InitialContext jndiContext = new InitialContext(jndiProps);
     	System.out.println("!!! jndi props " + jndiContext.getEnvironment());
-    	viewJndi(jndiContext, "");
-    	viewJndi(jndiContext, "queue");
-    	viewJndi(jndiContext, "ejb");
+    	//viewJndi(jndiContext, "");
+    	//viewJndi(jndiContext, "queue");
+    	//viewJndi(jndiContext, "ejb");
     	
-    	String state = (String)session.getAttribute(STATE);
+   /* 	String state = (String)session.getAttribute(STATE);
     	System.out.println("HTTPSession state " + state);
     	if (state == null){
 	    	session.setAttribute(STATE, MODIFIED);
@@ -132,16 +153,36 @@ public class SfsbServlet extends HttpServlet {
     	sfsb.setState("MODIFIED");
     	System.out.println("State2 " + sfsb.getState());
     	
-    	long id = System.currentTimeMillis();
+    	long value = System.currentTimeMillis();
+    	long id = 1104;
     	jndiBinding = "java:global/sfsbTest-1.0/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
-    	tester.createEntity(id);
-    	tester.findEntity(id);
+    	TestEntity entity = tester.findEntity(id);
+    	if (entity == null) {
+    		System.out.println("Creating entity " + value);
+    		entity = tester.createEntity(id, value);
+    	} else {
+    		System.out.println("found entity " + entity.getValue());
+    	}*/
     	
     	JmsClient sm = new JmsClient(remoting);
         String msg = "Testing123";
 
         sm.sendMessageOverJMS(msg);
+	}
+	
+	protected void testMail() throws Exception {
+		InitialContext ctx = new InitialContext();
+		javax.mail.Session session = (javax.mail.Session) ctx.lookup("java:jboss/mail/Default");
+		MimeMessage msg = new MimeMessage(session);
+		msg.setSubject("TB12");
+		msg.setContent("Go Pats!", "text/plain");
+		Address to = new InternetAddress("bdecoste@gmail.com");
+		msg.addRecipient(Message.RecipientType.TO, to);
+		Transport trans = session.getTransport("smtps");
+		trans.connect("smtp.gmail.com", "bdecoste", "TomBr@dy12");
+		trans.sendMessage(msg, msg.getAllRecipients());
+		trans.close();
 	}
 	
 	public static void main(String args[]) throws Throwable

@@ -25,6 +25,7 @@ import java.util.Properties;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.MessageProducer;
 import javax.jms.ObjectMessage;
@@ -32,6 +33,7 @@ import javax.jms.Queue;
 import javax.jms.QueueSession;
 import javax.jms.Session;
 import javax.jms.TextMessage;
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -39,6 +41,7 @@ import org.jboss.sasl.JBossSaslProvider;
 
 public class JmsClient {
 	protected String remoting;
+	protected static int toggle = 0;
 	//static {
 	//   Security.addProvider(new JBossSaslProvider());
 	//}
@@ -74,19 +77,41 @@ public class JmsClient {
 
     public void setupJMSConnection() throws JMSException, NamingException
     {
+  /*  	String gearName = System.getenv("OPENSHIFT_GEAR_UUID");
+    	String targetGearName = null;
+    	if (toggle == 0) {
+    		toggle = 1;
+    		targetGearName="be673bcb5bcb4b4fbaa3d0c4a4c0bcdd";
+    	} else {
+    		toggle = 0;
+    		targetGearName="d16ac89498474f4a831a8e4637825912";
+    	}
+    	System.out.println("!!!!! gearName " + gearName + " " + targetGearName);*/
+    	
+    	Context context = null;
+    	ConnectionFactory cf = null;
+  
     	Properties jndiProps = new Properties();
     	jndiProps.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming");
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
     	System.out.println("!!!!!!!! remoting " + remoting);
-    	InitialContext context = new InitialContext(jndiProps);
+    	context = new InitialContext(jndiProps);
     	
     	System.out.println("!!!!!!!! props " + context.getEnvironment());
-    	
-    	ConnectionFactory cf = (ConnectionFactory) context.lookup("java:jboss/exported/jms/RemoteConnectionFactory");
-    	queue = (Queue) context.lookup("java:jboss/exported/jms/queue/test");
-    	conn = cf.createConnection("guest", "guest");
+    
+ //   	if (gearName.equals(targetGearName)) {
+    		System.out.println("!!! RemoteConnectionFactory");
+    		cf = (ConnectionFactory) context.lookup("RemoteConnectionFactory");
+ //   	} else {
+ //   		System.out.println("!!! RemoteGearConnectionFactory");
+ //   		cf = (ConnectionFactory) context.lookup("java:jboss/exported/jms/RemoteGearConnectionFactory");
+ //   	}
+   // 	queue = (Queue) context.lookup("java:jboss/exported/jms/queue/test"); // + targetGearName);
+    	queue = (Queue) context.lookup("queue/test");
+    	conn = cf.createConnection("admin", "admin");
     	session = conn.createSession(false, QueueSession.AUTO_ACKNOWLEDGE);
     	conn.start();
+
     }
 
     public void cleanupJMSConnection() throws JMSException

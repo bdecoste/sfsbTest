@@ -33,8 +33,8 @@ import java.util.Date;
  */
 public interface EntityTester
 {
-	void createEntity(long id);
+	TestEntity createEntity(long id, long value);
    
-	void findEntity(long id);
+	TestEntity findEntity(long id);
 
 }

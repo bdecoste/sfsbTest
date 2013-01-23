@@ -5,7 +5,7 @@ import javax.ejb.Stateful;
 import org.jboss.ejb3.annotation.Clustered;
 
 @Stateful
-@Clustered
+//@Clustered
 public class StatefulBean1 implements StatefulBean1Local, StatefulBean1Remote {
 	
 	private String state = "INITIAL";
