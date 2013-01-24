@@ -12,7 +12,7 @@ import javax.ejb.MessageDriven;
 		@ActivationConfigProperty(propertyName="destinationType",propertyValue="javax.jms.Queue"),
 		@ActivationConfigProperty(propertyName="destination",propertyValue="queue/test")
 })
-@org.jboss.ejb3.annotation.Pool(value="mdb-pool")
+//@org.jboss.ejb3.annotation.Pool(value="mdb-pool")
 public class TestMDB implements MessageListener {
 
 	@Override
