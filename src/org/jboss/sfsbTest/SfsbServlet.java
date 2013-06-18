@@ -83,7 +83,9 @@ public class SfsbServlet extends HttpServlet {
 			
 			LOG.info("########################### callSfsb ########################");
 			
-			testActiveMQ();
+			MysqlTest.initConnection();
+			
+			//testActiveMQ();
 			
 	/*	    for (int i = 0 ; i < 10 ; ++i) {
 				StringTokenizer tokenizer = new StringTokenizer(remotings, ",");

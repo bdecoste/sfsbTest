@@ -44,6 +44,11 @@
 	</pluginRepositories>
 
 	<dependencies>
+	    <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.22</version>
+        </dependency>
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
 			<artifactId>jboss-javaee-6.0</artifactId>
