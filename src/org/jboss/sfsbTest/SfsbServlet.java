@@ -83,7 +83,7 @@ public class SfsbServlet extends HttpServlet {
 			
 			LOG.info("########################### callSfsb ########################");
 			
-			MysqlTest.initConnection();
+			//MysqlTest.initConnection();
 			
 			//testActiveMQ();
 			
