@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>sfsfTest</groupId>
+	<groupId>sfsbTest</groupId>
 	<artifactId>sfsbTest</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
@@ -73,11 +73,11 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-client</artifactId>
 			<version>5.8-SNAPSHOT</version>
-		</dependency>
+		</dependency-->
 	</dependencies>
 
 	<build>

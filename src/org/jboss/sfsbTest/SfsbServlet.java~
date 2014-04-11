@@ -69,7 +69,7 @@ public class SfsbServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		callSfsb(session);
 
-		response.getWriter().write("JEE Test Servlet");
+		reponse.getWriter().write("JEE Test Servlet");
 	}
 
 	/**
