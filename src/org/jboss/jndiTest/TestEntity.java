@@ -9,6 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="TESTENTITY")
+@javax.persistence.Cacheable
 public class TestEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

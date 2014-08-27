@@ -4,6 +4,8 @@
 		<!--jta-data-source>java:jboss/datasources/MysqlDS</jta-data-source-->
 		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
 		<!--jta-data-source>java:jboss/datasources/PostgreSQLDS</jta-data-source-->
+		
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
         <properties>
             <!--property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
@@ -11,6 +13,8 @@
             
             <property name="hibernate.hbm2ddl.auto" value="create-drop" />
             <property name="hibernate.search.default.indexBase" value="${env.OOPENSHIFT_DATA_DIR}"/> 
+            <property name="hibernate.cache.infinispan.statistics" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
         </properties>
 	
 	</persistence-unit>
