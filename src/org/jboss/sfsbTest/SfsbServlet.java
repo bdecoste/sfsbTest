@@ -86,7 +86,7 @@ public class SfsbServlet extends HttpServlet {
 			
 			LOG.info("########################### callSfsb ########################");
 			
-			//MysqlTest.initConnection();
+	//		MysqlTest.initConnection();
 			
 			//testActiveMQ();
 			
@@ -99,7 +99,7 @@ public class SfsbServlet extends HttpServlet {
 				}
 			} */
 			
-			for (int i = 0 ; i < 1 ; ++i)
+//			for (int i = 0 ; i < 1 ; ++i)
 				runTest(session, "localhost:5445");
 			
 //			runTest(session, "be673bcb5b-bdecoste26e.dev.rhcloud.com[35545]");
