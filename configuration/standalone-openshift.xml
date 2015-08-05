@@ -99,10 +99,10 @@
             <level name="INFO" />
          </logger>
          <logger category="org.jgroups">
-            <level name="TRACE" />
+            <level name="INFO" />
          </logger>
          <logger category="org.jboss.as.clustering">
-            <level name="TRACE" />
+            <level name="INFO" />
          </logger>
          <logger category="com.arjuna">
             <level name="WARN" />
@@ -150,7 +150,7 @@
                </security>
             </datasource>
             <xa-datasource jndi-name="java:jboss/datasources/helloworld_mysql" pool-name="helloworld_mysql" use-java-context="true" enabled="true">
-               <xa-datasource-property name="ServerName">172.30.204.100</xa-datasource-property>
+               <xa-datasource-property name="ServerName">172.30.188.4</xa-datasource-property>
                <xa-datasource-property name="Port">3306</xa-datasource-property>
                <xa-datasource-property name="DatabaseName">root</xa-datasource-property>
                <driver>mysql</driver>
@@ -164,7 +164,7 @@
                </validation>
             </xa-datasource>
             <datasource jta="false" jndi-name="java:jboss/datasources/helloworld_mysqlObjectStore" pool-name="helloworld_mysqlObjectStorePool" enabled="true">
-               <connection-url>jdbc:mysql://172.30.204.100:3306/root</connection-url>
+               <connection-url>jdbc:mysql://172.30.188.4:3306/root</connection-url>
                <driver>mysql</driver>
                <security>
                   <user-name>admin</user-name>
