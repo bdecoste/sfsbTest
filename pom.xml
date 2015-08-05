@@ -13,7 +13,7 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
-	<repositories>
+	<!--repositories>
 		<repository>
 			<id>jboss-public-repository-group</id>
 			<name>JBoss Public Repository Group</name>
@@ -41,7 +41,32 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories-->
+
+        <repositories>
+            <repository>
+               <id>jboss-eap-repository</id>
+               <url>http://maven.repository.redhat.com/techpreview/all</url>
+               <releases>
+                  <enabled>true</enabled>
+               </releases>
+               <snapshots>
+                  <enabled>true</enabled>
+               </snapshots>
+            </repository>
+         </repositories>
+         <pluginRepositories>
+            <pluginRepository>
+               <id>jboss-eap-plugin-repository</id>
+               <url>http://maven.repository.redhat.com/techpreview/all</url>
+               <releases>
+                  <enabled>true</enabled>
+               </releases>
+               <snapshots>
+                  <enabled>true</enabled>
+               </snapshots>
+            </pluginRepository>
+         </pluginRepositories>
 
 	<dependencies>
 	    <dependency>
