@@ -150,13 +150,13 @@
                </security>
             </datasource>
             <xa-datasource jndi-name="java:jboss/datasources/helloworld_mysql" pool-name="helloworld_mysql" use-java-context="true" enabled="true">
-               <xa-datasource-property name="ServerName">172.30.241.239</xa-datasource-property>
+               <xa-datasource-property name="ServerName">172.30.242.213</xa-datasource-property>
                <xa-datasource-property name="Port">3306</xa-datasource-property>
-               <xa-datasource-property name="DatabaseName">root</xa-datasource-property>
+               <xa-datasource-property name="DatabaseName">sampledb</xa-datasource-property>
                <driver>mysql</driver>
                <security>
-                  <user-name>userrjB</user-name>
-                  <password>pDiHx8HE</password>
+                  <user-name>userE3V</user-name>
+                  <password>A0ag8iju0b4sEag4</password>
                </security>
                <validation>
                   <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker" />
@@ -164,11 +164,11 @@
                </validation>
             </xa-datasource>
             <datasource jta="false" jndi-name="java:jboss/datasources/helloworld_mysqlObjectStore" pool-name="helloworld_mysqlObjectStorePool" enabled="true">
-               <connection-url>jdbc:mysql://172.30.241.239:3306/root</connection-url>
+               <connection-url>jdbc:mysql://172.30.242.213:3306/sampledb</connection-url>
                <driver>mysql</driver>
                <security>
-                  <user-name>userrjB</user-name>
-                  <password>pDiHx8HE</password>
+                  <user-name>userE3V</user-name>
+                  <password>A0ag8iju0b4sEag4</password>
                </security>
             </datasource>
             <drivers>
