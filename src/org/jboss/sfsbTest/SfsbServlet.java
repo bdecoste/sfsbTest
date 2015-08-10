@@ -99,7 +99,7 @@ public class SfsbServlet extends HttpServlet {
 				}
 			} */
 			
-//			for (int i = 0 ; i < 1 ; ++i)
+			for (int i = 0 ; i < 2 ; ++i)
 				runTest(session, "localhost:5445");
 			
 //			runTest(session, "be673bcb5b-bdecoste26e.dev.rhcloud.com[35545]");
