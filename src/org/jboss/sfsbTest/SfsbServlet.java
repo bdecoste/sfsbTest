@@ -32,12 +32,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.jboss.jndiTest.EntityTester;
-import org.jboss.jndiTest.StatefulBean1;
-import org.jboss.jndiTest.StatefulBean1Local;
-import org.jboss.jndiTest.StatefulBean1Remote;
-import org.jboss.jndiTest.StatelessBean1Remote;
-import org.jboss.jndiTest.TestEntity;
+import org.jboss.jndiTest.*;
+
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.*;
@@ -244,6 +240,10 @@ public class SfsbServlet extends HttpServlet {
     	//viewJndi(jndiContext, "");
     	//viewJndi(jndiContext, "queue");
     	//viewJndi(jndiContext, "ejb");
+    	
+    	TimerRemote timer = (TimerRemote)jndiContext.lookup("ejb:/sfsbTest/TimerBean!org.jboss.jndiTest.TimerRemote");
+    	if (!timer.checkTimerStatus())
+    		timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
     	System.out.println("HTTPSession state " + state);
