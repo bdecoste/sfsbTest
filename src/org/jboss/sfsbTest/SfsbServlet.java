@@ -88,7 +88,7 @@ public class SfsbServlet extends HttpServlet {
 			
 	//		MysqlTest.initConnection();
 			
-			//testActiveMQ();
+			testActiveMQ();
 			
 	/*	    for (int i = 0 ; i < 10 ; ++i) {
 				StringTokenizer tokenizer = new StringTokenizer(remotings, ",");
@@ -114,9 +114,9 @@ public class SfsbServlet extends HttpServlet {
 /*	
 	protected void testActiveMQ() throws Exception {
 		
-		String ip = System.getenv("OPENSHIFT_ACTIVEMQ_IP");
-		String port = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
-		String host = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_HOST");
+		String ip = "172.30.170.220"; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
+		String port = "61616"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
+		String host = "172.30.170.220"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_HOST");
 		if (host != null && host.trim().length() > 0) {
 			ip = host;
 			port = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
