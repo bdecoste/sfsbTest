@@ -117,10 +117,10 @@ public class SfsbServlet extends HttpServlet {
 		String ip = "172.30.136.250"; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
 		String port = "61616"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
 		String host = "172.30.136.250"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_HOST");
-		if (host != null && host.trim().length() > 0) {
-			ip = host;
-			port = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
-		}
+		//if (host != null && host.trim().length() > 0) {
+		//	ip = host;
+		//	port = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
+		//}
 		consumeAmqMessage(ip, port);
 		sendAmqMessage(ip, port);
 	}
