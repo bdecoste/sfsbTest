@@ -24,7 +24,7 @@ public class TimerBean implements TimerRemote {
  
     @Override
     public void startTimer() {
-        Timer timer = service.createTimer(1000, 24 * 60 * 60 * 1000, null);
+        Timer timer = service.createTimer(1000, 60 * 1000, null);
         System.out.println("Timers set");
     }
  
