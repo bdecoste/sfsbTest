@@ -39,7 +39,7 @@ import org.jboss.jndiTest.StatefulBean1Remote;
 import org.jboss.jndiTest.StatelessBean1Remote;
 import org.jboss.jndiTest.TestEntity;
 
-//import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.*;
 
 /**
@@ -111,7 +111,7 @@ public class SfsbServlet extends HttpServlet {
     		throw new ServletException(e);
     	}
 	}
-/*	
+	
 	protected void testActiveMQ() throws Exception {
 		
 		String ip = "172.30.170.220"; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
@@ -222,7 +222,7 @@ public class SfsbServlet extends HttpServlet {
         session.close();
         connection.close();
 	}
-*/	
+	
 	protected void viewJndi(Context ctx, String path) throws Exception {
 		System.out.println("pair '" + path + "'");
 		NamingEnumeration<NameClassPair> enumeration = ctx.list(path);
