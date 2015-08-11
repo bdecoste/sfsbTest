@@ -48,6 +48,7 @@ public class SfsbServlet extends HttpServlet {
 	private static final String STATE = "STATE";
 	private static final String SFSB = "SFSB";
 	private static final String MODIFIED = "MODIFIED";
+ 	private static final String AMQ_IP = "172.30.199.239";
 	
 	Logger LOG = Logger.getLogger(SfsbServlet.class); 
 
@@ -110,13 +111,15 @@ public class SfsbServlet extends HttpServlet {
 	
 	protected void testActiveMQ() throws Exception {
 		
-		String ip = "172.30.136.250"; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
+		String ip = AMQ_IP; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
 		String port = "61616"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
-		String host = "172.30.136.250"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_HOST");
+		String host = AMQ_IP; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_HOST");
+
 		//if (host != null && host.trim().length() > 0) {
 		//	ip = host;
 		//	port = System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
 		//}
+
 		consumeAmqMessage(ip, port);
 		sendAmqMessage(ip, port);
 	}
