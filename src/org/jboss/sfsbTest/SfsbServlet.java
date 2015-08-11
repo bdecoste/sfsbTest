@@ -148,7 +148,7 @@ public class SfsbServlet extends HttpServlet {
             	
 
                 // Create a ConnectionFactory
-                ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://" + ip + ":" + port);
+                ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://" + ip + ":" + port,"joe","redhat");
 
                 // Create a Connection
                 Connection connection = connectionFactory.createConnection();
@@ -194,7 +194,7 @@ public class SfsbServlet extends HttpServlet {
 				
 		System.out.println("!!!!!! sending ip " + ip + " " + port);
 		
-		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://" + ip + ":" + port);
+		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://" + ip + ":" + port,"joe","redhat");
 
         // Create a Connection
         Connection connection = connectionFactory.createConnection();
