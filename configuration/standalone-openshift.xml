@@ -367,7 +367,6 @@
                     </security-setting>
                 </security-settings>
                 <address-settings>
-                    <!--default for catch all-->
                     <address-setting match="#">
                         <dead-letter-address>jms.queue.DLQ</dead-letter-address>
                         <expiry-address>jms.queue.ExpiryQueue</expiry-address>
