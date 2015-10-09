@@ -45,6 +45,7 @@ import org.apache.log4j.*;
 public class SfsbServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	private static final String KEY = "KEY";
 	private static final String STATE = "STATE";
 	private static final String SFSB = "SFSB";
 	private static final String MODIFIED = "MODIFIED";
@@ -283,10 +284,15 @@ public class SfsbServlet extends HttpServlet {
     	sfsb.setState("MODIFIED");
     	System.out.println("State2 " + sfsb.getState());
     	
-    	long value = System.currentTimeMillis();
-    	long id = 1104;
     	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
+    	
+    	Long id = (Long)session.getAttribute(KEY);
+    	if (id == null) {
+    		id = System.currentTimeMillis();
+    		session.setAttribute(KEY, id);
+    	}
+    	long value = System.currentTimeMillis();
     	TestEntity entity = tester.findEntity(id);
     	if (entity == null) {
     		System.out.println("Creating entity " + value);
