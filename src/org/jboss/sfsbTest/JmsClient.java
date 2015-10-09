@@ -23,7 +23,7 @@ package org.jboss.sfsbTest;
 import java.security.Security;
 import java.util.Properties;
 
-import javax.jms.Connection;
+/*import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 import javax.jms.JMSException;
@@ -32,7 +32,7 @@ import javax.jms.ObjectMessage;
 import javax.jms.Queue;
 import javax.jms.QueueSession;
 import javax.jms.Session;
-import javax.jms.TextMessage;
+import javax.jms.TextMessage; */
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -50,7 +50,7 @@ public class JmsClient {
 		this.remoting = remoting;
 	}
 	
-	private static final String PROPERTY = "SFSBTEST";
+/*	private static final String PROPERTY = "SFSBTEST";
 	Connection conn;
     Session session;
     Queue queue;
@@ -77,7 +77,7 @@ public class JmsClient {
 
     public void setupJMSConnection() throws JMSException, NamingException
     {
-  /*  	String gearName = System.getenv("OPENSHIFT_GEAR_UUID");
+    	String gearName = System.getenv("OPENSHIFT_GEAR_UUID");
     	String targetGearName = null;
     	if (toggle == 0) {
     		toggle = 1;
@@ -86,7 +86,7 @@ public class JmsClient {
     		toggle = 0;
     		targetGearName="d16ac89498474f4a831a8e4637825912";
     	}
-    	System.out.println("!!!!! gearName " + gearName + " " + targetGearName);*/
+    	System.out.println("!!!!! gearName " + gearName + " " + targetGearName);
     	
     	Context context = null;
     	ConnectionFactory cf = null;
@@ -127,5 +127,5 @@ public class JmsClient {
         String msg = Long.toString(System.currentTimeMillis());
 
         sm.sendMessageOverJMS(msg);
-    }
+    } */
 }

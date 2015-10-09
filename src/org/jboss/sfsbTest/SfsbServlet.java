@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-import javax.jms.Connection;
+/*import javax.jms.Connection;
 import javax.jms.DeliveryMode;
 import javax.jms.Destination;
 import javax.jms.ExceptionListener;
@@ -14,7 +14,7 @@ import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
-import javax.jms.TextMessage;
+import javax.jms.TextMessage;*/
 import javax.mail.Address;
 //import javax.mail.Message;
 import javax.mail.Provider;
@@ -35,7 +35,7 @@ import javax.servlet.http.HttpSession;
 import org.jboss.jndiTest.*;
 
 
-import org.apache.activemq.ActiveMQConnectionFactory;
+// import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.*;
 
 /**
@@ -110,7 +110,7 @@ public class SfsbServlet extends HttpServlet {
     	}
 	}
 	
-	protected void testActiveMQ() throws Exception {
+/*	protected void testActiveMQ() throws Exception {
 		
 		String ip = AMQ_IP; //System.getenv("OPENSHIFT_ACTIVEMQ_IP");
 		String port = "61616"; //System.getenv("OPENSHIFT_ACTIVEMQ_OPENWIRE_PORT");
@@ -123,15 +123,15 @@ public class SfsbServlet extends HttpServlet {
 
 		consumeAmqMessage(ip, port);
 		sendAmqMessage(ip, port);
-	}
+	} 
 		
 	protected void consumeAmqMessage(String ip, String port) throws Exception {
         Thread consumerThread = new Thread(new AmqConsumer(ip, port));
         consumerThread.setDaemon(false);
         consumerThread.start();
-	}
+	} */
 	
-	public class AmqConsumer implements Runnable, ExceptionListener {
+/*	public class AmqConsumer implements Runnable, ExceptionListener {
 		
 		String ip;
 		String port;
@@ -221,7 +221,7 @@ public class SfsbServlet extends HttpServlet {
         // Clean up
         session.close();
         connection.close();
-	}
+	} */
 	
 	protected void viewJndi(Context ctx, String path) throws Exception {
 		System.out.println("pair '" + path + "'");
