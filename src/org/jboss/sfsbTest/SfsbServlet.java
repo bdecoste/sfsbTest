@@ -266,7 +266,7 @@ public class SfsbServlet extends HttpServlet {
     		String jndiBinding = "ejb:/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
     		StatefulBean1Remote remote = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
     		System.out.println("Calling remote setState");
-    		remote.setState("REMOTE " + Systemem.currentTimeMillis());
+    		remote.setState("REMOTE " + System.currentTimeMillis());
     	}
     	
     	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
