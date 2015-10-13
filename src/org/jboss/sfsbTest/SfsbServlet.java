@@ -251,9 +251,9 @@ public class SfsbServlet extends HttpServlet {
     	
     	String state = (String)session.getAttribute(STATE);
     	System.out.println("HTTPSession state " + state);
-    	if (state == null){
-	    	session.setAttribute(STATE, MODIFIED);
-    	}
+   // 	if (state == null){
+	    	session.setAttribute(STATE, MODIFIED + System.currentTimeMillis());
+   // 	}
     	
     	StatefulBean1Remote sfsb = (StatefulBean1Remote)session.getAttribute(SFSB);
     	System.out.println("HTTPSession sfsb " + sfsb);
@@ -266,7 +266,7 @@ public class SfsbServlet extends HttpServlet {
     		String jndiBinding = "ejb:/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
     		StatefulBean1Remote remote = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
     		System.out.println("Calling remote setState");
-    		remote.setState("REMOTE");
+    		remote.setState("REMOTE " + Systemem.currentTimeMillis());
     	}
     	
     	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
@@ -281,10 +281,10 @@ public class SfsbServlet extends HttpServlet {
     	}
 	
     	System.out.println("State1 " + sfsb.getState());
-    	sfsb.setState("MODIFIED");
+    	sfsb.setState("MODIFIED " + System.currentTimeMillis());
     	System.out.println("State2 " + sfsb.getState());
     	
-    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
+/*    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
     	
     	Long id = (Long)session.getAttribute(KEY);
@@ -299,7 +299,7 @@ public class SfsbServlet extends HttpServlet {
     		entity = tester.createEntity(id, value);
     	} else {
     		System.out.println("found entity " + entity.getValue());
-    	}
+    	}*/
     	
  //   	JmsClient sm = new JmsClient(remoting);
  //       String msg = "Testing123";
