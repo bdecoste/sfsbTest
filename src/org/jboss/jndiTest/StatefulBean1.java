@@ -20,7 +20,7 @@ public class StatefulBean1 implements StatefulBean1Local, StatefulBean1Remote {
     }
     
     public void setState(String state) {
-    	System.out.println("StatefulBean new state " + state);
+//    	System.out.println("StatefulBean new state " + state);
     	this.state = state;
     }
 	

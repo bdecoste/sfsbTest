@@ -19,7 +19,7 @@ public class StatelessBean1 implements StatelessBean1Remote, StatelessBean1Local
     }
     
     public void call(){
-    	System.out.println("Stateless called");
+//    	System.out.println("Stateless called");
     }
 
 }

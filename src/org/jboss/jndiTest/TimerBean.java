@@ -25,12 +25,12 @@ public class TimerBean implements TimerRemote {
     @Override
     public void startTimer() {
         Timer timer = service.createTimer(1000, 60 * 1000, null);
-        System.out.println("Timers set");
+//        System.out.println("Timers set");
     }
  
     @Timeout
     public void handleTimeout(Timer timer) {
-        System.out.println("Timeout!!!!!!!!!!!!!!!");
+//        System.out.println("Timeout!!!!!!!!!!!!!!!");
     }
  
     @Override
@@ -40,8 +40,8 @@ public class TimerBean implements TimerRemote {
         Iterator<Timer> iterator = timers.iterator();
         while (iterator.hasNext()) {
             timer = iterator.next();
-            System.out.println ("Timer will expire after " + 
-                    timer.getTimeRemaining() + " milliseconds.");
+//            System.out.println ("Timer will expire after " + 
+//                    timer.getTimeRemaining() + " milliseconds.");
             return true;
         }
         return false;
