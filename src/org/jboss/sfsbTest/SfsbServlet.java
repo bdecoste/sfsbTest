@@ -144,7 +144,7 @@ public class SfsbServlet extends HttpServlet {
         public void run() {
             try {
             	
-            	System.out.println("!!!!! consuming " + ip + " " + port);
+            	//System.out.println("!!!!! consuming " + ip + " " + port);
             	
 
                 // Create a ConnectionFactory
@@ -171,28 +171,28 @@ public class SfsbServlet extends HttpServlet {
                 if (message instanceof TextMessage) {
                     TextMessage textMessage = (TextMessage) message;
                     String text = textMessage.getText();
-                    System.out.println("Received: " + text);
+                    //System.out.println("Received: " + text);
                 } else {
-                    System.out.println("Received: " + message);
+                    //System.out.println("Received: " + message);
                 }
 
                 consumer.close();
                 session.close();
                 connection.close();
             } catch (Exception e) {
-                System.out.println("Caught: " + e);
+                //System.out.println("Caught: " + e);
                 e.printStackTrace();
             }
         }
 
         public synchronized void onException(JMSException ex) {
-            System.out.println("JMS Exception occured.  Shutting down client.");
+            //System.out.println("JMS Exception occured.  Shutting down client.");
         }
     }
 
 	protected void sendAmqMessage(String ip, String port) throws Exception {
 				
-		System.out.println("!!!!!! sending ip " + ip + " " + port);
+		//System.out.println("!!!!!! sending ip " + ip + " " + port);
 		
 		ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://" + ip + ":" + port);
 
@@ -215,7 +215,7 @@ public class SfsbServlet extends HttpServlet {
         TextMessage message = session.createTextMessage(text);
 
         // Tell the producer to send the message
-        System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());
+        //System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());
         producer.send(message);
 
         // Clean up
@@ -224,23 +224,23 @@ public class SfsbServlet extends HttpServlet {
 	} */
 	
 	protected void viewJndi(Context ctx, String path) throws Exception {
-		System.out.println("pair '" + path + "'");
+		//System.out.println("pair '" + path + "'");
 		NamingEnumeration<NameClassPair> enumeration = ctx.list(path);
 		while (enumeration.hasMoreElements()){
 			NameClassPair pair = enumeration.next();
-			System.out.println("  " + pair.getName() + " " + pair.getClassName());
+			//System.out.println("  " + pair.getName() + " " + pair.getClassName());
 		}
 	}
 	
 	protected void runTest(HttpSession session, String remoting) throws Exception {
-		System.out.println("-------------------------------");
+		//System.out.println("-------------------------------");
     	Properties props = new Properties();
       
     	Properties jndiProps = new Properties();
     	jndiProps.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
     	jndiProps.put(InitialContext.PROVIDER_URL, "remote://" + remoting);
     	InitialContext jndiContext = new InitialContext(jndiProps);
-    	System.out.println("!!! jndi props " + jndiContext.getEnvironment());
+    	//System.out.println("!!! jndi props " + jndiContext.getEnvironment());
     	//viewJndi(jndiContext, "");
     	//viewJndi(jndiContext, "queue");
     	//viewJndi(jndiContext, "ejb");
@@ -250,13 +250,13 @@ public class SfsbServlet extends HttpServlet {
     		timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
-    	System.out.println("HTTPSession state " + state);
+    	//System.out.println("HTTPSession state " + state);
    // 	if (state == null){
 	    	session.setAttribute(STATE, MODIFIED + System.currentTimeMillis());
    // 	}
     	
     	StatefulBean1Remote sfsb = (StatefulBean1Remote)session.getAttribute(SFSB);
-    	System.out.println("HTTPSession sfsb " + sfsb);
+    	//System.out.println("HTTPSession sfsb " + sfsb);
     	
     	if (sfsb == null) {
     		String jndiBinding = "ejb:/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
@@ -265,24 +265,24 @@ public class SfsbServlet extends HttpServlet {
     	} else {
     		String jndiBinding = "ejb:/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
     		StatefulBean1Remote remote = (StatefulBean1Remote) jndiContext.lookup(jndiBinding);
-    		System.out.println("Calling remote setState");
+    		//System.out.println("Calling remote setState");
     		remote.setState("REMOTE " + System.currentTimeMillis());
     	}
     	
     	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
     	StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
-    	System.out.println("local bean " + local);
+    	//System.out.println("local bean " + local);
     	
     	jndiBinding = "ejb:/sfsbTest/StatelessBean1!org.jboss.jndiTest.StatelessBean1Remote";
     	StatelessBean1Remote stateless = (StatelessBean1Remote) jndiContext.lookup(jndiBinding);
-    	System.out.println("stateless bean " + stateless);
+    	//System.out.println("stateless bean " + stateless);
     	for (int i = 0 ; i < 5 ; ++i){
     		stateless.call();
     	}
 	
-    	System.out.println("State1 " + sfsb.getState());
+    	//System.out.println("State1 " + sfsb.getState());
     	sfsb.setState("MODIFIED " + System.currentTimeMillis());
-    	System.out.println("State2 " + sfsb.getState());
+    	//System.out.println("State2 " + sfsb.getState());
     	
 /*    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
@@ -295,10 +295,10 @@ public class SfsbServlet extends HttpServlet {
     	long value = System.currentTimeMillis();
     	TestEntity entity = tester.findEntity(id);
     	if (entity == null) {
-    		System.out.println("Creating entity " + value);
+    		//System.out.println("Creating entity " + value);
     		entity = tester.createEntity(id, value);
     	} else {
-    		System.out.println("found entity " + entity.getValue());
+    		//System.out.println("found entity " + entity.getValue());
     	}*/
     	
  //   	JmsClient sm = new JmsClient(remoting);
