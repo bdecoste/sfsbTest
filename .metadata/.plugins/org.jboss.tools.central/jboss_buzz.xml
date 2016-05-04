@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/atom10full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+<title>JBoss Central</title>
+<generator uri="http://tt-rss.org/">Tiny Tiny RSS/1.9</generator>
+<updated>2016-03-18T18:07:26+00:00</updated>
+<id>http://tiny-man.rhcloud.com/public.php?op=rss&amp;id=1&amp;key=b0143615132bd9efc4e83ba42a5574f6ab939b28</id>
+
+
+<link href="http://tiny-man.rhcloud.com" rel="alternate" />
+
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><entry>
+	<id>http://tools.jboss.org/blog/ga-for-mars2.html</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/dTc5EEDgXUw/ga-for-mars2.html" rel="alternate" type="text/html" />
+	<title>JBoss Tools and Red Hat Developer Studio for Eclipse Mars.2</title>
+	<summary type="html"><![CDATA[
+      <div><div id="preamble">
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p><a href="http://tools.jboss.org/downloads/jbosstools/mars/4.3.1.Final.html">JBoss Tools 4.3.1</a> and <a href="http://tools.jboss.org/downloads/devstudio/mars/9.1.0.GA.html">Red Hat JBoss Developer Studio 9.1</a> for Eclipse Mars.2 are now generally available!</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/blog/images/jbds9.png" alt="jbds9" />
+      </div>
+      </div>
+      <div class="admonitionblock caution">
+      <table>
+      <tr>
+      <td class="icon">
+      <i class="fa icon-caution" title="Caution"></i>
+      </td>
+      <td class="content">
+      Java 8 is required for installing and using JBoss Tools. We still support developing and running applications using older Java runtimes. See more in <a href="http://tools.jboss.org/blog/2015-06-23-beta1-for-mars.html#java-8-to-run-eclipse-older-runtimes-ok-for-builds-deployment">Beta1 blog</a>.
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="installation"><a class="anchor" href="#installation"></a>Installation</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>JBoss Developer Studio comes with everything pre-bundled in its installer. Simply download it from our <a href="https://www.jboss.org/products/devstudio.html">JBoss Products page</a> and run it like this:</p>
+      </div>
+      <div class="literalblock">
+      <div class="content">
+      <pre>java -jar jboss-devstudio-&lt;installername&gt;.jar</pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>JBoss Tools or Bring-Your-Own-Eclipse (BYOE) JBoss Developer Studio require a bit more:</p>
+      </div>
+      <div class="paragraph">
+      <p>This release requires at least Eclipse 4.5.2 (Mars.2) but we recommend
+      using the <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr">Eclipse 4.5.2 Mars.2 Java EE Bundle</a> since then you get most of the dependencies preinstalled.</p>
+      </div>
+      <div class="paragraph">
+      <p>Once you have installed Eclipse, you can either find us on the Eclipse Marketplace under &quot;JBoss Tools&quot; or &quot;Red Hat JBoss Developer Studio&quot;.</p>
+      </div>
+      <div class="paragraph">
+      <p>For JBoss Tools, you can also use our update site directly.</p>
+      </div>
+      <div class="literalblock">
+      <div class="content">
+      <pre>http://download.jboss.org/jbosstools/mars/stable/updates/</pre>
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>There is also a new installer available for 64-bit Windows. See details in <a href="#new-developer-studio-platform-installer-for-container-based-development">New Developer Studio Platform Installer for Container Based Development</a> section.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="what-is-new"><a class="anchor" href="#what-is-new"></a>What is new?</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>This release is based on Eclipse Mars.2 and our focus was mainly on OpenShift and Red Hat Container Development Kit tools improvements. Besides that there is a bunch of new features and a lot of fixed bugs.
+      The full list of what is new you can find on <a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html">this page</a>.</p>
+      </div>
+      <div class="sect2">
+      <h3 id="new-developer-studio-platform-installer-for-container-based-development"><a class="anchor" href="#new-developer-studio-platform-installer-for-container-based-development"></a>New Developer Studio Platform Installer for Container Based Development</h3>
+      <div class="paragraph">
+      <p>A new installer for 64-bit Windows is now available. This installer is quite different from the good old Developer Studio universal installer.
+      This will help you install Developer Studio with a full development environment for container based development using <strong>Red Hat Enterprise Linux</strong> and <strong>OpenShift</strong>.</p>
+      </div>
+      <div class="paragraph">
+      <p>Developer Studio Platform Installer Beta currently works on 64-bit Windows only and is available as a Technology Preview.</p>
+      </div>
+      <div class="paragraph">
+      <p>It helps to install and configure the following components to work together on your machine:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Red Hat JBoss Developer Studio</p>
+      </li>
+      <li>
+      <p>Red Hat Container Development Kit</p>
+      </li>
+      <li>
+      <p>Vagrant</p>
+      </li>
+      <li>
+      <p>VirtualBox</p>
+      </li>
+      <li>
+      <p>OpenJDK</p>
+      </li>
+      <li>
+      <p>Cygwin</p>
+      </li>
+      <li>
+      <p>OpenShift Client (OC) Tools</p>
+      </li>
+      </ul>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/general/images/devstudio_platform.png" alt="Red Hat JBoss Developer Studio Platform" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>You can see how this installer works in this short screen cast:</p>
+      </div>
+      <div class="videoblock">
+      <div class="content">
+      <iframe src="//www.youtube.com/embed/dMWAguol3as?rel=0" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+      </div>
+      </div>
+      <div class="sect2">
+      <h3 id="openshift-3-and-red-hat-container-development-kit"><a class="anchor" href="#openshift-3-and-red-hat-container-development-kit"></a>OpenShift 3 and Red Hat Container Development Kit</h3>
+      <div class="paragraph">
+      <p>OpenShift 3 was introduced as a technology preview feature in JBDS 9.0.0.GA. We’re happy to see it graduate to the level of <strong>supported</strong> feature in this release.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/new-explorer.png" alt="new explorer" width="750" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>New OpenShift Server Adapter for easier and faster deployment, debug mode, integration with Red Hat Container Development Kit and more notable features were added.
+      More than <a href="https://issues.jboss.org/issues/?jql=project%20in%20%28JBIDE%2C%20JBDS%29%20AND%20issuetype%20in%20standardIssueTypes%28%29%20AND%20resolution%20%3D%20Done%20AND%20fixVersion%20in%20%284.3.1.Beta1%2C%204.3.1.Beta2%2C%204.3.1.CR1%2C%204.3.1.Final%2C%209.1.0.Beta1%2C%209.1.0.Beta2%2C%209.1.0.CR1%2C%209.1.0.GA%29%20AND%20component%20in%20%28cdk%2C%20openshift%29">300 issues and enhancements</a> were also tackled in this version.
+      See the full list of the new OpenShift tooling stuff on <a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html#openshift">New and Noteworthy</a> page.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="docker"><a class="anchor" href="#docker"></a>Docker</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Tooling for Docker is available in Eclipse Mars under the <a href="http://eclipse.org/linuxtools">Linux tools</a>
+      umbrella. Despite this name, this works on all major developer platforms. It
+      is mirrored on <a href="http://download.jboss.org/jbosstools/mars/stable/updates/">JBoss Tools update site</a>.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_mars1/docker_explorer_view.png" alt="docker explorer view" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>The Docker tools was introduced in Developer Studio 9.0 and has been improved in Developer Studio 9.1:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>New Docker Machine Support</p>
+      </li>
+      <li>
+      <p>Improved Run Image Launch Configuration</p>
+      </li>
+      <li>
+      <p>TM Terminal Support for Interactive Shells</p>
+      </li>
+      <li>
+      <p>Build Docker Images improvements</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>More details in <a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html#docker">New and Noteworthy</a>.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="hibernate-5"><a class="anchor" href="#hibernate-5"></a>Hibernate 5</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Hibernate 5 is now supported. Two new runtime providers for Hibernate were added in this release. Both these new versions can be selected in the relevant wizards.</p>
+      </div>
+      <div class="imageblock" style="text-align: center">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/hibernate/images/4.3.1.Final/cfg-xml.png" alt="cfg xml" width="381" />
+      </div>
+      <div class="title">Figure 1. Hibernate Configuration File Wizard</div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="forge-3"><a class="anchor" href="#forge-3"></a>Forge 3</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>The included Forge runtime is now 3.0.1.Final. Read the official announcement  <a href="http://forge.jboss.org/news/forge-3.0.1.final-is-here">here</a>.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.3.1.Final/startup.png" alt="startup" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="automated-error-reporting"><a class="anchor" href="#automated-error-reporting"></a>Automated Error Reporting</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>With your permission, Eclipse and Red Hat JBoss Developer Studio can now inspect errors logged inside the IDE and inform project committers about the issues you’ve experienced. This optional service, called <a href="https://dev.eclipse.org/recommenders/community/confess/#/about">Automated Error Reporting Initiative (AERI)</a>, can report issues to both the <a href="https://bugs.eclipse.org/bugs/">Eclipse Bugzilla</a> and the <a href="https://issues.jboss.org/browse/JBIDE">JBoss JIRA</a>.</p>
+      </div>
+      <div class="paragraph">
+      <p>When the first error is logged, you’ll be asked if you’d like to participate in error reporting, which is by default completely anonymous and only happens if an error occurs.</p>
+      </div>
+      <div class="paragraph">
+      <p>Should you want to configure how the service operates, or provide your email address so that you could be contacted regarding any reports you submit, open <code>Preferences &gt; General &gt; Error Reporting</code>. You can then click <code>Configure Projects…​</code> to enable or disable reporting to Eclipse or JBoss.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="http://tools.jboss.org/documentation/whatsnew/usage/images/aeri_jbt431.png" alt="AERI Reporting Enabled" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>As always, neither Eclipse nor JBoss will use any information unless a user has opted in, nor is there ever any personal information sent unless it is provided on the Preferences page.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="what-is-next"><a class="anchor" href="#what-is-next"></a>What is Next</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Our next stop is a major update for Developer Studio which will be based on Eclipse Neon.</p>
+      </div>
+      <div class="paragraph">
+      <p>Enjoy!</p>
+      </div>
+      <div class="paragraph">
+      <p>Alexey Kazakov</p>
+      </div>
+      </div>
+      </div></div>
+    ]]></summary>
+	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;&lt;a href="http://tools.jboss.org/downloads/jbosstools/mars/4.3.1.Final.html" target="_blank"&gt;JBoss Tools 4.3.1&lt;/a&gt; and &lt;a href="http://tools.jboss.org/downloads/devstudio/mars/9.1.0.GA.html" target="_blank"&gt;Red Hat JBoss Developer Studio 9.1&lt;/a&gt; for Eclipse Mars.2 are now generally available!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/jbds9.png" alt="jbds9"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;table&gt;&lt;tr&gt;&lt;td&gt;
+      &lt;i title="Caution"&gt;&lt;/i&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+      Java 8 is required for installing and using JBoss Tools. We still support developing and running applications using older Java runtimes. See more in &lt;a href="http://tools.jboss.org/blog/2015-06-23-beta1-for-mars.html#java-8-to-run-eclipse-older-runtimes-ok-for-builds-deployment" target="_blank"&gt;Beta1 blog&lt;/a&gt;.
+      &lt;/td&gt;
+      &lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#installation" target="_blank"&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;JBoss Developer Studio comes with everything pre-bundled in its installer. Simply download it from our &lt;a href="https://www.jboss.org/products/devstudio.html" target="_blank"&gt;JBoss Products page&lt;/a&gt; and run it like this:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;pre&gt;java -jar jboss-devstudio-&amp;lt;installername&amp;gt;.jar&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;JBoss Tools or Bring-Your-Own-Eclipse (BYOE) JBoss Developer Studio require a bit more:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;This release requires at least Eclipse 4.5.2 (Mars.2) but we recommend
+      using the &lt;a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr" target="_blank"&gt;Eclipse 4.5.2 Mars.2 Java EE Bundle&lt;/a&gt; since then you get most of the dependencies preinstalled.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Once you have installed Eclipse, you can either find us on the Eclipse Marketplace under "JBoss Tools" or "Red Hat JBoss Developer Studio".&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;For JBoss Tools, you can also use our update site directly.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;pre&gt;http://download.jboss.org/jbosstools/mars/stable/updates/&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;There is also a new installer available for 64-bit Windows. See details in &lt;a href="#new-developer-studio-platform-installer-for-container-based-development" target="_blank"&gt;New Developer Studio Platform Installer for Container Based Development&lt;/a&gt; section.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#what-is-new" target="_blank"&gt;&lt;/a&gt;What is new?&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;This release is based on Eclipse Mars.2 and our focus was mainly on OpenShift and Red Hat Container Development Kit tools improvements. Besides that there is a bunch of new features and a lot of fixed bugs.
+      The full list of what is new you can find on &lt;a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html" target="_blank"&gt;this page&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#new-developer-studio-platform-installer-for-container-based-development" target="_blank"&gt;&lt;/a&gt;New Developer Studio Platform Installer for Container Based Development&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;p&gt;A new installer for 64-bit Windows is now available. This installer is quite different from the good old Developer Studio universal installer.
+      This will help you install Developer Studio with a full development environment for container based development using &lt;strong&gt;Red Hat Enterprise Linux&lt;/strong&gt; and &lt;strong&gt;OpenShift&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Developer Studio Platform Installer Beta currently works on 64-bit Windows only and is available as a Technology Preview.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;It helps to install and configure the following components to work together on your machine:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;Red Hat JBoss Developer Studio&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Red Hat Container Development Kit&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Vagrant&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;VirtualBox&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;OpenJDK&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Cygwin&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;OpenShift Client (OC) Tools&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/general/images/devstudio_platform.png" alt="Red Hat JBoss Developer Studio Platform"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;You can see how this installer works in this short screen cast:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h3&gt;&lt;a href="#openshift-3-and-red-hat-container-development-kit" target="_blank"&gt;&lt;/a&gt;OpenShift 3 and Red Hat Container Development Kit&lt;/h3&gt;
+      &lt;div&gt;
+      &lt;p&gt;OpenShift 3 was introduced as a technology preview feature in JBDS 9.0.0.GA. We&amp;rsquo;re happy to see it graduate to the level of &lt;strong&gt;supported&lt;/strong&gt; feature in this release.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/new-explorer.png" alt="new explorer" width="750"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;New OpenShift Server Adapter for easier and faster deployment, debug mode, integration with Red Hat Container Development Kit and more notable features were added.
+      More than &lt;a href="https://issues.jboss.org/issues/?jql=project%20in%20%28JBIDE%2C%20JBDS%29%20AND%20issuetype%20in%20standardIssueTypes%28%29%20AND%20resolution%20%3D%20Done%20AND%20fixVersion%20in%20%284.3.1.Beta1%2C%204.3.1.Beta2%2C%204.3.1.CR1%2C%204.3.1.Final%2C%209.1.0.Beta1%2C%209.1.0.Beta2%2C%209.1.0.CR1%2C%209.1.0.GA%29%20AND%20component%20in%20%28cdk%2C%20openshift%29" target="_blank"&gt;300 issues and enhancements&lt;/a&gt; were also tackled in this version.
+      See the full list of the new OpenShift tooling stuff on &lt;a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html#openshift" target="_blank"&gt;New and Noteworthy&lt;/a&gt; page.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#docker" target="_blank"&gt;&lt;/a&gt;Docker&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Tooling for Docker is available in Eclipse Mars under the &lt;a href="http://eclipse.org/linuxtools" target="_blank"&gt;Linux tools&lt;/a&gt;
+      umbrella. Despite this name, this works on all major developer platforms. It
+      is mirrored on &lt;a href="http://download.jboss.org/jbosstools/mars/stable/updates/" target="_blank"&gt;JBoss Tools update site&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/docker/images/docker_mars1/docker_explorer_view.png" alt="docker explorer view"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The Docker tools was introduced in Developer Studio 9.0 and has been improved in Developer Studio 9.1:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;New Docker Machine Support&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Improved Run Image Launch Configuration&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;TM Terminal Support for Interactive Shells&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Build Docker Images improvements&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;More details in &lt;a href="http://tools.jboss.org/documentation/whatsnew/jbosstools/4.3.1.Final.html#docker" target="_blank"&gt;New and Noteworthy&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#hibernate-5" target="_blank"&gt;&lt;/a&gt;Hibernate 5&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Hibernate 5 is now supported. Two new runtime providers for Hibernate were added in this release. Both these new versions can be selected in the relevant wizards.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/hibernate/images/4.3.1.Final/cfg-xml.png" alt="cfg xml" width="381"&gt;&lt;/div&gt;
+      &lt;div&gt;Figure 1. Hibernate Configuration File Wizard&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#forge-3" target="_blank"&gt;&lt;/a&gt;Forge 3&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The included Forge runtime is now 3.0.1.Final. Read the official announcement  &lt;a href="http://forge.jboss.org/news/forge-3.0.1.final-is-here" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.3.1.Final/startup.png" alt="startup"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#automated-error-reporting" target="_blank"&gt;&lt;/a&gt;Automated Error Reporting&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;With your permission, Eclipse and Red Hat JBoss Developer Studio can now inspect errors logged inside the IDE and inform project committers about the issues you&amp;rsquo;ve experienced. This optional service, called &lt;a href="https://dev.eclipse.org/recommenders/community/confess/#/about" target="_blank"&gt;Automated Error Reporting Initiative (AERI)&lt;/a&gt;, can report issues to both the &lt;a href="https://bugs.eclipse.org/bugs/" target="_blank"&gt;Eclipse Bugzilla&lt;/a&gt; and the &lt;a href="https://issues.jboss.org/browse/JBIDE" target="_blank"&gt;JBoss JIRA&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;When the first error is logged, you&amp;rsquo;ll be asked if you&amp;rsquo;d like to participate in error reporting, which is by default completely anonymous and only happens if an error occurs.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Should you want to configure how the service operates, or provide your email address so that you could be contacted regarding any reports you submit, open &lt;code&gt;Preferences &amp;gt; General &amp;gt; Error Reporting&lt;/code&gt;. You can then click &lt;code&gt;Configure Projects&amp;hellip;&amp;#8203;&lt;/code&gt; to enable or disable reporting to Eclipse or JBoss.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/usage/images/aeri_jbt431.png" alt="AERI Reporting Enabled"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;As always, neither Eclipse nor JBoss will use any information unless a user has opted in, nor is there ever any personal information sent unless it is provided on the Preferences page.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#what-is-next" target="_blank"&gt;&lt;/a&gt;What is Next&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Our next stop is a major update for Developer Studio which will be based on Eclipse Neon.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Enjoy!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Alexey Kazakov&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/dTc5EEDgXUw" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-20T08:47:22+00:00</updated>
+	<author><name>akazakov</name></author>
+	<source>
+		<link rel="self" href="http://tools.jboss.org/blog/" />
+		<title>JBoss Tools</title></source>
+
+	<category term="release" />
+
+	<category term="jbosstools" />
+
+	<category term="devstudio" />
+
+	<category term="jbosscentral" />
+
+
+<feedburner:origLink>http://tools.jboss.org/blog/ga-for-mars2.html</feedburner:origLink></entry>
+
+<entry>
+	<id>http://tools.jboss.org/blog/2016-04-18-debug-down-the-turtle-stack.html</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/S00gYx_nHKw/2016-04-18-debug-down-the-turtle-stack.html" rel="alternate" type="text/html" />
+	<title>Debugging Down the Turtle Stack</title>
+	<summary type="html"><![CDATA[
+      <div><div id="preamble">
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Recently, I was working on a <a href="https://issues.jboss.org/browse/JBIDE-21857">problem</a> with WildFly and Java hot code replacement. When the JVM refuses to update a class (for example, because you added a method), JBoss Server tooling tries to be helpful and offers to restart the web apps in the WildFly server. Unfortunately, this doesn’t work 100%: even though the class in question is deployed and used, further changes in the class will be refused. While debugging a potential fix for this (it’s a garbage collection problem, but that’s not the point of this story), I installed a new version of OpenJDK and bam! everything just stopped working. Ok, &quot;everything&quot; is overstating the problem a bit, but I couldn’t deploy to the server anymore, which for a web app is pretty bad. So forget about hot code replacement…​this is MUCH worse. Seems I was hitting a <a href="https://issues.jboss.org/browse/JBIDE-15203">known problem</a>.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="so-what-s-the-problem"><a class="anchor" href="#so-what-s-the-problem"></a>So what’s the problem?</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>The tooling complained that it couldn’t move some file to its final location, in the deployment directory of the server. Often the root directory, but not always. Hmh…​the directory being locked maybe? This was on Windows, so I fired up <code>cmd.exe</code> and looked at the directory in question (<code>dir /Q</code> is helpful). This is where it gets weird. The directory was there, but it had no owner. Deleting it was impossible. Wat?!</p>
+      </div>
+      <div class="paragraph">
+      <p><span class="image"><img src="http://i2.kym-cdn.com/photos/images/original/000/173/580/Wat.jpg" alt="Wat" /></span></p>
+      </div>
+      <div class="paragraph">
+      <p>I started <a href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx"><code>procmon.exe</code></a> to see what was happening. The move to the directory failed with <code>DELETE_PENDING</code>. Looking at the source, this directory had been deleted (successfully) as part of the deployment, and recreated. All of a sudden, my spidey sense tingled…​there <em>was</em> something weird about deleting stuff on Windows (I used to be a <em>real</em> hacker, you know…​). On Unix-like OS’s, deleting a file just removes it from the directory. Once the last link to the file is gone it is deleted as soon as the last handle to the file is closed. Windows <em>almost</em> does the same thing, but the file is not immediately removed from the directory. Instead, it is in a zombie state, where you can still see the file, but you can’t do anything with it. That would explain the problem, so like a good little scientist, I then had a hypothesis: the WildFly server was somehow keeping a handle to the deleted directory open and thus, kept it alive. Since WildFly is using the Java <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html">WatchService</a> to find out about changes in the deployment directory, the WatchService was my designated bad guy for the time being.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="let-s-verify"><a class="anchor" href="#let-s-verify"></a>Let’s verify</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>It’s quite hard to test this against the WildFly server (it being a, let’s say, &quot;non-trivial&quot; program), so what was needed was a simple program that reproduces the problem…​clickety click…​here we go: two processes, one is watching a directory, the other tries to delete, recreate and modify the directory. Looks good, except it did NOT reproduce the problem.. This could be timing-dependent, so I applied a time tested strategy called &quot;poking at the problem&quot;. Just added some sleep(500)&apos;s in random places and hoped for the best. Indeed, after a couple of tries, I was able to reproduce the problem maybe 20% of the time. Even better: I could reproduce it with the debugger attached. Good thing this was on OpenJDK: it meant I could just download the sources and debug through the WatchService class. And indeed, the WatchService was stuck trying to clean up the handle to our directory. It had dutifully cancelled any pending &quot;overlapped&quot; I/O requests (that’s just asynchronous I/O for the non-Windows folk) and now was waiting for the I/O to be indeed cancelled. But the last operation on the directory had failed (it was deleted, remember?), so there was no pending I/O, which means the thread would wait forever.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="the-takeaway"><a class="anchor" href="#the-takeaway"></a>The takeaway…​</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>We now have a <a href="https://bugs.openjdk.java.net/browse/JDK-8153925">bug report</a> and a patched build of OpenJDK that allows me to get back to solving the original problem. That’s pretty cool, eh? This is a good example of what you can do when a system is open to inspection. It helps that I can look at the OpenJDK sources; debugging bytecodes is definitely no fun. But the coding style used in the WatchService class is also very important. They mirror the Windows native calls in a Java class. This (and MSDN) makes it  possible to debug the windows specific implementation of the watch service.</p>
+      </div>
+      <div class="paragraph">
+      <p>Thanks to Rob Stryker and Alex Kashchenko who helped me debug this problem.</p>
+      </div>
+      </div>
+      </div></div>
+    ]]></summary>
+	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Recently, I was working on a &lt;a href="https://issues.jboss.org/browse/JBIDE-21857" target="_blank"&gt;problem&lt;/a&gt; with WildFly and Java hot code replacement. When the JVM refuses to update a class (for example, because you added a method), JBoss Server tooling tries to be helpful and offers to restart the web apps in the WildFly server. Unfortunately, this doesn&amp;rsquo;t work 100%: even though the class in question is deployed and used, further changes in the class will be refused. While debugging a potential fix for this (it&amp;rsquo;s a garbage collection problem, but that&amp;rsquo;s not the point of this story), I installed a new version of OpenJDK and bam! everything just stopped working. Ok, "everything" is overstating the problem a bit, but I couldn&amp;rsquo;t deploy to the server anymore, which for a web app is pretty bad. So forget about hot code replacement&amp;hellip;&amp;#8203;this is MUCH worse. Seems I was hitting a &lt;a href="https://issues.jboss.org/browse/JBIDE-15203" target="_blank"&gt;known problem&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#so-what-s-the-problem" target="_blank"&gt;&lt;/a&gt;So what&amp;rsquo;s the problem?&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The tooling complained that it couldn&amp;rsquo;t move some file to its final location, in the deployment directory of the server. Often the root directory, but not always. Hmh&amp;hellip;&amp;#8203;the directory being locked maybe? This was on Windows, so I fired up &lt;code&gt;cmd.exe&lt;/code&gt; and looked at the directory in question (&lt;code&gt;dir /Q&lt;/code&gt; is helpful). This is where it gets weird. The directory was there, but it had no owner. Deleting it was impossible. Wat?!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;&lt;span&gt;&lt;img src="http://i2.kym-cdn.com/photos/images/original/000/173/580/Wat.jpg" alt="Wat"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;I started &lt;a href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx" target="_blank"&gt;&lt;code&gt;procmon.exe&lt;/code&gt;&lt;/a&gt; to see what was happening. The move to the directory failed with &lt;code&gt;DELETE_PENDING&lt;/code&gt;. Looking at the source, this directory had been deleted (successfully) as part of the deployment, and recreated. All of a sudden, my spidey sense tingled&amp;hellip;&amp;#8203;there &lt;em&gt;was&lt;/em&gt; something weird about deleting stuff on Windows (I used to be a &lt;em&gt;real&lt;/em&gt; hacker, you know&amp;hellip;&amp;#8203;). On Unix-like OS&amp;rsquo;s, deleting a file just removes it from the directory. Once the last link to the file is gone it is deleted as soon as the last handle to the file is closed. Windows &lt;em&gt;almost&lt;/em&gt; does the same thing, but the file is not immediately removed from the directory. Instead, it is in a zombie state, where you can still see the file, but you can&amp;rsquo;t do anything with it. That would explain the problem, so like a good little scientist, I then had a hypothesis: the WildFly server was somehow keeping a handle to the deleted directory open and thus, kept it alive. Since WildFly is using the Java &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/WatchService.html" target="_blank"&gt;WatchService&lt;/a&gt; to find out about changes in the deployment directory, the WatchService was my designated bad guy for the time being.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#let-s-verify" target="_blank"&gt;&lt;/a&gt;Let&amp;rsquo;s verify&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;It&amp;rsquo;s quite hard to test this against the WildFly server (it being a, let&amp;rsquo;s say, "non-trivial" program), so what was needed was a simple program that reproduces the problem&amp;hellip;&amp;#8203;clickety click&amp;hellip;&amp;#8203;here we go: two processes, one is watching a directory, the other tries to delete, recreate and modify the directory. Looks good, except it did NOT reproduce the problem.. This could be timing-dependent, so I applied a time tested strategy called "poking at the problem". Just added some sleep(500)'s in random places and hoped for the best. Indeed, after a couple of tries, I was able to reproduce the problem maybe 20% of the time. Even better: I could reproduce it with the debugger attached. Good thing this was on OpenJDK: it meant I could just download the sources and debug through the WatchService class. And indeed, the WatchService was stuck trying to clean up the handle to our directory. It had dutifully cancelled any pending "overlapped" I/O requests (that&amp;rsquo;s just asynchronous I/O for the non-Windows folk) and now was waiting for the I/O to be indeed cancelled. But the last operation on the directory had failed (it was deleted, remember?), so there was no pending I/O, which means the thread would wait forever.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#the-takeaway" target="_blank"&gt;&lt;/a&gt;The takeaway&amp;hellip;&amp;#8203;&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;We now have a &lt;a href="https://bugs.openjdk.java.net/browse/JDK-8153925" target="_blank"&gt;bug report&lt;/a&gt; and a patched build of OpenJDK that allows me to get back to solving the original problem. That&amp;rsquo;s pretty cool, eh? This is a good example of what you can do when a system is open to inspection. It helps that I can look at the OpenJDK sources; debugging bytecodes is definitely no fun. But the coding style used in the WatchService class is also very important. They mirror the Windows native calls in a Java class. This (and MSDN) makes it  possible to debug the windows specific implementation of the watch service.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Thanks to Rob Stryker and Alex Kashchenko who helped me debug this problem.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/S00gYx_nHKw" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-19T21:57:15+00:00</updated>
+	<author><name>tmader</name></author>
+	<source>
+		<link rel="self" href="http://tools.jboss.org/blog/" />
+		<title>JBoss Tools</title></source>
+
+	<category term="devstudio" />
+
+	<category term="jbosstools" />
+
+	<category term="eap" />
+
+	<category term="openjdk" />
+
+
+<feedburner:origLink>http://tools.jboss.org/blog/2016-04-18-debug-down-the-turtle-stack.html</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/04/16/this-week-in-jboss-16th-april-2016-better-late-than-never</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/ehwxzD0UYjs/this-week-in-jboss-16th-april-2016-better-late-than-never" rel="alternate" type="text/html" />
+	<title>This week in JBoss (16th April 2016): Better Late Than Never!</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:85abec57-e4b1-480b-ad69-e6f2c547c992] --><div class="jive-rendered-content"><p>Apologies for being a couple of weeks since the last instalment but we're here again! And what a couple of weeks it's been?!</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Microservices has been dominating a lot of conversations across the industry for a while. Is it new? How does it relate to SOA? When I was on holiday recently I got a chance to put down a few thoughts on the subject, for instance how they relate to <a class="jive-link-external-small" href="http://planet.jboss.org/post/microservices_and_distributed_systems" rel="nofollow">fundamental distributed systems</a>, or <a class="jive-link-external-small" href="http://planet.jboss.org/post/when_is_a_microservice_not_a_microservice" rel="nofollow">what constitutes a microservice</a> if in the future, as I suspect, we allow them to become dynamic systems? I also had a few musings on what typically leads to monoliths and how <a class="jive-link-external-small" href="http://planet.jboss.org/post/monoliths_and_micromonoliths" rel="nofollow">microservices isn't necessarily going to avoid those pitfalls</a>. Take a look because your input in this technology wave is crucial.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>The Infinispan team seem to have got stuck in releasing one version after another (which is a good thing!) First we had <a class="jive-link-external-small" href="http://planet.jboss.org/post/infinispan_8_2_1_final_is_out" rel="nofollow">8.2.1.Final</a>, then <a class="jive-link-external-small" href="http://planet.jboss.org/post/infinispan_8_1_3_final_is_out" rel="nofollow">8.1.3.Final</a>, and now <a class="jive-link-external-small" href="http://planet.jboss.org/post/infinispan_9_0_0_alpha1_is_out" rel="nofollow">9.0.0.Alpha1</a>! Never one to be outdone, the Arquillian team shot back with a <a class="jive-link-external-small" href="http://planet.jboss.org/post/graphene_2_1_0_beta1_released" rel="nofollow">Graphene release</a>, a new <a class="jive-link-external-small" href="http://planet.jboss.org/post/arquillian_drone_extension_2_0_0_cr1_released" rel="nofollow">Drone version </a>(<a class="jive-link-external-small" href="http://planet.jboss.org/post/arquillian_drone_extension_2_0_0_final_released" rel="nofollow">two actually</a>), and the <a class="jive-link-external-small" href="http://planet.jboss.org/post/arquillian_container_undertow_1_0_0_alpha2_released" rel="nofollow">Container Undertow</a> release! There have also been a number of other releases of projects so check out <a class="jive-link-external-small" href="http://www.jboss.org/buzz/" rel="nofollow">The Buzz</a>!</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Time for a couple of other highlights, such as Marc talking about <a class="jive-link-external-small" href="http://planet.jboss.org/post/using_apiman_in_a_network_with_limited_internet_access" rel="nofollow">APIMan in a network with limited connectivity</a>, Heiko about <a class="jive-link-external-small" href="http://planet.jboss.org/post/hawkular_in_manageiq_sprint_demo_s" rel="nofollow">Hawkular in ManageIQ sprints</a>, Martin on <a class="jive-link-external-small" href="http://planet.jboss.org/post/weld_meets_vert_x" rel="nofollow">Weld meeting Vert.x</a> (great news!) and Vlad with the <a class="jive-link-external-small" href="http://planet.jboss.org/post/hibernate_community_newsletter_8_2016" rel="nofollow">Hibernate newsletter</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Mauricio also had some good news about the Drools book he co-authored - <a class="jive-link-external-small" href="http://planet.jboss.org/post/mastering_drools_6_book_is_out" rel="nofollow">it's out now</a>! Good luck guys and I'm looking forward to the movie version!</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>OK that's it for now. Hopefully we'll be back in a week and not two <span aria-label="Happy" class="emoticon-inline emoticon_happy" style="height:16px;width:16px;"></span></p></div><!-- [DocumentBodyEnd:85abec57-e4b1-480b-ad69-e6f2c547c992] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:85abec57-e4b1-480b-ad69-e6f2c547c992] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;Apologies for being a couple of weeks since the last instalment but we're here again! And what a couple of weeks it's been?!&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Microservices has been dominating a lot of conversations across the industry for a while. Is it new? How does it relate to SOA? When I was on holiday recently I got a chance to put down a few thoughts on the subject, for instance how they relate to &lt;a href="http://planet.jboss.org/post/microservices_and_distributed_systems" rel="nofollow" target="_blank"&gt;fundamental distributed systems&lt;/a&gt;, or &lt;a href="http://planet.jboss.org/post/when_is_a_microservice_not_a_microservice" rel="nofollow" target="_blank"&gt;what constitutes a microservice&lt;/a&gt; if in the future, as I suspect, we allow them to become dynamic systems? I also had a few musings on what typically leads to monoliths and how &lt;a href="http://planet.jboss.org/post/monoliths_and_micromonoliths" rel="nofollow" target="_blank"&gt;microservices isn't necessarily going to avoid those pitfalls&lt;/a&gt;. Take a look because your input in this technology wave is crucial.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The Infinispan team seem to have got stuck in releasing one version after another (which is a good thing!) First we had &lt;a href="http://planet.jboss.org/post/infinispan_8_2_1_final_is_out" rel="nofollow" target="_blank"&gt;8.2.1.Final&lt;/a&gt;, then &lt;a href="http://planet.jboss.org/post/infinispan_8_1_3_final_is_out" rel="nofollow" target="_blank"&gt;8.1.3.Final&lt;/a&gt;, and now &lt;a href="http://planet.jboss.org/post/infinispan_9_0_0_alpha1_is_out" rel="nofollow" target="_blank"&gt;9.0.0.Alpha1&lt;/a&gt;! Never one to be outdone, the Arquillian team shot back with a &lt;a href="http://planet.jboss.org/post/graphene_2_1_0_beta1_released" rel="nofollow" target="_blank"&gt;Graphene release&lt;/a&gt;, a new &lt;a href="http://planet.jboss.org/post/arquillian_drone_extension_2_0_0_cr1_released" rel="nofollow" target="_blank"&gt;Drone version &lt;/a&gt;(&lt;a href="http://planet.jboss.org/post/arquillian_drone_extension_2_0_0_final_released" rel="nofollow" target="_blank"&gt;two actually&lt;/a&gt;), and the &lt;a href="http://planet.jboss.org/post/arquillian_container_undertow_1_0_0_alpha2_released" rel="nofollow" target="_blank"&gt;Container Undertow&lt;/a&gt; release! There have also been a number of other releases of projects so check out &lt;a href="http://www.jboss.org/buzz/" rel="nofollow" target="_blank"&gt;The Buzz&lt;/a&gt;!&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Time for a couple of other highlights, such as Marc talking about &lt;a href="http://planet.jboss.org/post/using_apiman_in_a_network_with_limited_internet_access" rel="nofollow" target="_blank"&gt;APIMan in a network with limited connectivity&lt;/a&gt;, Heiko about &lt;a href="http://planet.jboss.org/post/hawkular_in_manageiq_sprint_demo_s" rel="nofollow" target="_blank"&gt;Hawkular in ManageIQ sprints&lt;/a&gt;, Martin on &lt;a href="http://planet.jboss.org/post/weld_meets_vert_x" rel="nofollow" target="_blank"&gt;Weld meeting Vert.x&lt;/a&gt; (great news!) and Vlad with the &lt;a href="http://planet.jboss.org/post/hibernate_community_newsletter_8_2016" rel="nofollow" target="_blank"&gt;Hibernate newsletter&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Mauricio also had some good news about the Drools book he co-authored - &lt;a href="http://planet.jboss.org/post/mastering_drools_6_book_is_out" rel="nofollow" target="_blank"&gt;it's out now&lt;/a&gt;! Good luck guys and I'm looking forward to the movie version!&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;OK that's it for now. Hopefully we'll be back in a week and not two &lt;span aria-label="Happy"&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:85abec57-e4b1-480b-ad69-e6f2c547c992] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/ehwxzD0UYjs" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-16T06:52:44+00:00</updated>
+	<author><name>Mark Little</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+	<category term="hibernate" />
+
+	<category term="drools" />
+
+	<category term="infinispan" />
+
+	<category term="weld" />
+
+	<category term="arquillian" />
+
+	<category term="vert.x" />
+
+	<category term="apiman" />
+
+	<category term="hawkular" />
+
+	<category term="microservices" />
+
+	<category term="manageiq" />
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/04/16/this-week-in-jboss-16th-april-2016-better-late-than-never</feedburner:origLink></entry>
+
+<entry>
+	<id>http://tools.jboss.org/blog/we-are-hiring-migration.html</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/6uOnvHR3ZlU/we-are-hiring-migration.html" rel="alternate" type="text/html" />
+	<title>We are hiring for Migrations</title>
+	<summary type="html"><![CDATA[
+      <div><div class="paragraph">
+      <p>Have some experience developing Eclipse plugins ? Interested in making
+      an Eclipse plugin that will work in conjunction with a REST Services
+      back end to provide access to the migration process for Enterprise Application Server ?</p>
+      </div>
+      <div class="paragraph">
+      <p>The look at this recent new opening at jobs.redhat.com.</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="https://careers-redhat.icims.com/jobs/50800/senior-software-engineer/job" class="bare">https://careers-redhat.icims.com/jobs/50800/senior-software-engineer/job</a></p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Note: the job postings do list a specific remote base, but for the right candidate we are happy to consider many locations worldwide (anywhere there is a Red Hat office).</p>
+      </div>
+      <div class="paragraph">
+      <p>Have fun!<br />
+      Max Rydahl Andersen<br />
+      <a href="http://twitter.com/maxandersen">@maxandersen</a></p>
+      </div></div>
+    ]]></summary>
+	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
+      &lt;p&gt;Have some experience developing Eclipse plugins ? Interested in making
+      an Eclipse plugin that will work in conjunction with a REST Services
+      back end to provide access to the migration process for Enterprise Application Server ?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;The look at this recent new opening at jobs.redhat.com.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;&lt;a href="https://careers-redhat.icims.com/jobs/50800/senior-software-engineer/job" target="_blank"&gt;https://careers-redhat.icims.com/jobs/50800/senior-software-engineer/job&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Note: the job postings do list a specific remote base, but for the right candidate we are happy to consider many locations worldwide (anywhere there is a Red Hat office).&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Have fun!&lt;br&gt;
+      Max Rydahl Andersen&lt;br&gt;&lt;a href="http://twitter.com/maxandersen" target="_blank"&gt;@maxandersen&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/6uOnvHR3ZlU" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-15T15:41:25+00:00</updated>
+	<author><name>maxandersen</name></author>
+	<source>
+		<link rel="self" href="http://tools.jboss.org/blog/" />
+		<title>JBoss Tools</title></source>
+
+	<category term="job" />
+
+	<category term="jbosscentral" />
+
+
+<feedburner:origLink>http://tools.jboss.org/blog/we-are-hiring-migration.html</feedburner:origLink></entry>
+
+<entry>
+	<id>http://tools.jboss.org/blog/working-efficiciently-junit-eclipse-update.html</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/JmnPn2x9-kg/working-efficiciently-junit-eclipse-update.html" rel="alternate" type="text/html" />
+	<title>Working Efficiently with JUnit in Eclipse - Update</title>
+	<summary type="html"><![CDATA[
+      <div><div id="preamble">
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>I just wanted to add a few updates and my two cents to this old but still useful and accurate <a href="http://www.codeaffine.com/2012/11/26/working-efficiently-with-junit-in-eclipse-2/">blog post</a> (which is a must read of course!). Some elements were already mentioned in comments and I think all of that is worth providing a new detailed article.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="favorites-static-import"><a class="anchor" href="#favorites-static-import"></a>Favorites - static import</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>There were mentions of adding static imports for JUnit Assert methods. I recommend also to add some others for these popular frameworks:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p><a href="http://hamcrest.org/JavaHamcrest/">Hamcrest</a> Matcher</p>
+      </li>
+      <li>
+      <p><a href="http://joel-costigliola.github.io/assertj/">AssertJ</a></p>
+      </li>
+      <li>
+      <p><a href="http://mockito.org/">Mockito</a></p>
+      </li>
+      <li>
+      <p><a href="https://www.eclipse.org/swtbot/">SWTBot</a></p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>Please check out the below screenshot for what to add to your favorites:</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/favoritesStaticImport.png" alt="favoritesStaticImport" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="improvements-for-method-templates"><a class="anchor" href="#improvements-for-method-templates"></a>Improvements for Method Templates</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>There is no more need to type twice <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>space</kbd></span> to have the JUnit 4 Template proposals. Even better, when you start typing &quot;test&quot;, the JUnit 4 Template is listed first.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/testAutoCompletionJunit4before.png" alt="testAutoCompletionJunit4before" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="test-failures-how-to-easily-compare-results"><a class="anchor" href="#test-failures-how-to-easily-compare-results"></a>Test Failures - How to easily compare results</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Did you ever noticed the little icon on top right corner of JUnit view?</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/compareResult-JUnit.png" alt="compareResult JUnit" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Click on it! You will get a nice dialog comparing the actual and expected results:</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/compareResultDialog-JUnit.png" alt="compareResultDialog JUnit" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="moreunit-avanced-test-development-toolbox"><a class="anchor" href="#moreunit-avanced-test-development-toolbox"></a>MoreUnit - Avanced Test Development Toolbox</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p><a href="https://github.com/MoreUnit/MoreUnit-Eclipse">MoreUnit</a> is a plugin helping you to create and maintain Unit Tests. Some of its nice features are:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>Wizard to create test stubs, including Mock support</p>
+      </li>
+      <li>
+      <p>Navigate between test class and class under test using Ctrl+J</p>
+      </li>
+      <li>
+      <p>Refactoring: renaming classes/methods also renames the corresponding test code</p>
+      </li>
+      </ul>
+      </div>
+      <div class="paragraph">
+      <p>If you have tests in another projects - for instance you are an Eclipse RCP developer and use fragments for your unit tests - you can specify this folder from the MoreUnit Preferences page.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/specificTestFolderMOreUnit.png" alt="specificTestFolderMOreUnit" />
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="infinitest-continuous-testing"><a class="anchor" href="#infinitest-continuous-testing"></a>Infinitest - Continuous testing</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p><a href="https://infinitest.github.io">Infinitest</a> is a useful plugin to respect the <a href="https://en.wikipedia.org/wiki/Fail-fast">Fail fast</a> principle. It continuously executes tests in the background each time you save a file.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/statusBarUpdatedOnEverySave-Infinitest.png" alt="statusBarUpdatedOnEverySave Infinitest" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>If there are test failures:</p>
+      </div>
+      <div class="ulist">
+      <ul>
+      <li>
+      <p>The bottom-left status bar is turning red</p>
+      </li>
+      <li>
+      <p>Problem Markers are created to spot failing tests easily</p>
+      </li>
+      </ul>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/ProblemMarkers-InfiniTest.png" alt="ProblemMarkers InfiniTest" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>As some tests might be time consuming or requiring some external configuration or UI interactions, you can filter those by providing a infinitest.filters file at the root of the project. The same file will be used in other supported IDEs by Infinitest.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="eclemma-spot-untested-code"><a class="anchor" href="#eclemma-spot-untested-code"></a>Eclemma - Spot untested code</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>After you wrote your tests, I recommend to launch the <a href="http://eclemma.org/">Eclemma</a> Coverage tests. You can use <span class="keyseq"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>+<kbd>T</kbd></span>. It will show you a nice overview of possible missing test coverage in your code.</p>
+      </div>
+      <div class="imageblock">
+      <div class="content">
+      <img src="./images/workEfficientlyWithJunit/eclemma.png" alt="eclemma" />
+      </div>
+      </div>
+      <div class="paragraph">
+      <p>Note: Don’t focus too much on the percentage but have a deeper look to uncovered or partially covered lines. Make sure that these lines are not critical ones.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="for-eclipse-rcp-developer"><a class="anchor" href="#for-eclipse-rcp-developer"></a>For Eclipse RCP Developer</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>If you’re an Eclipse RCP developer, I will be happy to see you assisting to <a href="https://www.eclipsecon.org/france2016/session/fast-unit-tests-eclipse-plugins-possible-architectures-and-available-tooling">presentation</a> at <a href="https://www.eclipsecon.org/france2016">my talk at EclipseCon France</a> (Toulouse, June 7-9). I will talk about possible architectures and available tooling to have fast Unit tests while developing Eclipse plugins. I’m looking forward sharing my experience and continue discussions later on.</p>
+      </div>
+      </div>
+      </div>
+      <div class="sect1">
+      <h2 id="and-you"><a class="anchor" href="#and-you"></a>And You?</h2>
+      <div class="sectionbody">
+      <div class="paragraph">
+      <p>Do you have some other Tips, Tricks and best practice to share?</p>
+      </div>
+      <div class="paragraph">
+      <p>If you are using a different IDE, do you know about killer features enabling you to efficiently write unit tests but which are missing in Eclipse? Please share them!</p>
+      </div>
+      </div>
+      </div></div>
+    ]]></summary>
+	<content type="html">&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;I just wanted to add a few updates and my two cents to this old but still useful and accurate &lt;a href="http://www.codeaffine.com/2012/11/26/working-efficiently-with-junit-in-eclipse-2/" target="_blank"&gt;blog post&lt;/a&gt; (which is a must read of course!). Some elements were already mentioned in comments and I think all of that is worth providing a new detailed article.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#favorites-static-import" target="_blank"&gt;&lt;/a&gt;Favorites - static import&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;There were mentions of adding static imports for JUnit Assert methods. I recommend also to add some others for these popular frameworks:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;&lt;a href="http://hamcrest.org/JavaHamcrest/" target="_blank"&gt;Hamcrest&lt;/a&gt; Matcher&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a href="http://joel-costigliola.github.io/assertj/" target="_blank"&gt;AssertJ&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a href="http://mockito.org/" target="_blank"&gt;Mockito&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a href="https://www.eclipse.org/swtbot/" target="_blank"&gt;SWTBot&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Please check out the below screenshot for what to add to your favorites:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/favoritesStaticImport.png" alt="favoritesStaticImport"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#improvements-for-method-templates" target="_blank"&gt;&lt;/a&gt;Improvements for Method Templates&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;There is no more need to type twice &lt;span&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;space&lt;/kbd&gt;&lt;/span&gt; to have the JUnit 4 Template proposals. Even better, when you start typing "test", the JUnit 4 Template is listed first.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/testAutoCompletionJunit4before.png" alt="testAutoCompletionJunit4before"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#test-failures-how-to-easily-compare-results" target="_blank"&gt;&lt;/a&gt;Test Failures - How to easily compare results&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Did you ever noticed the little icon on top right corner of JUnit view?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/compareResult-JUnit.png" alt="compareResult JUnit"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Click on it! You will get a nice dialog comparing the actual and expected results:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/compareResultDialog-JUnit.png" alt="compareResultDialog JUnit"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#moreunit-avanced-test-development-toolbox" target="_blank"&gt;&lt;/a&gt;MoreUnit - Avanced Test Development Toolbox&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;&lt;a href="https://github.com/MoreUnit/MoreUnit-Eclipse" target="_blank"&gt;MoreUnit&lt;/a&gt; is a plugin helping you to create and maintain Unit Tests. Some of its nice features are:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;Wizard to create test stubs, including Mock support&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Navigate between test class and class under test using Ctrl+J&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Refactoring: renaming classes/methods also renames the corresponding test code&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If you have tests in another projects - for instance you are an Eclipse RCP developer and use fragments for your unit tests - you can specify this folder from the MoreUnit Preferences page.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/specificTestFolderMOreUnit.png" alt="specificTestFolderMOreUnit"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#infinitest-continuous-testing" target="_blank"&gt;&lt;/a&gt;Infinitest - Continuous testing&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;&lt;a href="https://infinitest.github.io" target="_blank"&gt;Infinitest&lt;/a&gt; is a useful plugin to respect the &lt;a href="https://en.wikipedia.org/wiki/Fail-fast" target="_blank"&gt;Fail fast&lt;/a&gt; principle. It continuously executes tests in the background each time you save a file.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/statusBarUpdatedOnEverySave-Infinitest.png" alt="statusBarUpdatedOnEverySave Infinitest"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If there are test failures:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;ul&gt;&lt;li&gt;
+      &lt;p&gt;The bottom-left status bar is turning red&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Problem Markers are created to spot failing tests easily&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/ProblemMarkers-InfiniTest.png" alt="ProblemMarkers InfiniTest"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;As some tests might be time consuming or requiring some external configuration or UI interactions, you can filter those by providing a infinitest.filters file at the root of the project. The same file will be used in other supported IDEs by Infinitest.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#eclemma-spot-untested-code" target="_blank"&gt;&lt;/a&gt;Eclemma - Spot untested code&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;After you wrote your tests, I recommend to launch the &lt;a href="http://eclemma.org/" target="_blank"&gt;Eclemma&lt;/a&gt; Coverage tests. You can use &lt;span&gt;&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;E&lt;/kbd&gt;+&lt;kbd&gt;T&lt;/kbd&gt;&lt;/span&gt;. It will show you a nice overview of possible missing test coverage in your code.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;img src="./images/workEfficientlyWithJunit/eclemma.png" alt="eclemma"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Note: Don&amp;rsquo;t focus too much on the percentage but have a deeper look to uncovered or partially covered lines. Make sure that these lines are not critical ones.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#for-eclipse-rcp-developer" target="_blank"&gt;&lt;/a&gt;For Eclipse RCP Developer&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If you&amp;rsquo;re an Eclipse RCP developer, I will be happy to see you assisting to &lt;a href="https://www.eclipsecon.org/france2016/session/fast-unit-tests-eclipse-plugins-possible-architectures-and-available-tooling" target="_blank"&gt;presentation&lt;/a&gt; at &lt;a href="https://www.eclipsecon.org/france2016" target="_blank"&gt;my talk at EclipseCon France&lt;/a&gt; (Toulouse, June 7-9). I will talk about possible architectures and available tooling to have fast Unit tests while developing Eclipse plugins. I&amp;rsquo;m looking forward sharing my experience and continue discussions later on.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;h2&gt;&lt;a href="#and-you" target="_blank"&gt;&lt;/a&gt;And You?&lt;/h2&gt;
+      &lt;div&gt;
+      &lt;div&gt;
+      &lt;p&gt;Do you have some other Tips, Tricks and best practice to share?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+      &lt;p&gt;If you are using a different IDE, do you know about killer features enabling you to efficiently write unit tests but which are missing in Eclipse? Please share them!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/JmnPn2x9-kg" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-15T03:55:15+00:00</updated>
+	<author><name>apupier</name></author>
+	<source>
+		<link rel="self" href="http://tools.jboss.org/blog/" />
+		<title>JBoss Tools</title></source>
+
+	<category term="eclipse" />
+
+
+<feedburner:origLink>http://tools.jboss.org/blog/working-efficiciently-junit-eclipse-update.html</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/04/01/this-week-in-jboss-1st-april-2016-no-fooling-you</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/3d1yoFEqdi8/this-week-in-jboss-1st-april-2016-no-fooling-you" rel="alternate" type="text/html" />
+	<title>This week in JBoss (1st April 2016): No Fooling You</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:bfbae0d0-9a65-4bc4-93bd-dc415c73d119] --><div class="jive-rendered-content"><p>April Fools' Day traditionally involves the playing of pranks and hoaxes on others, often with media and other organisations making announcements that are then later exposed as jokes.&nbsp; While these are mostly harmless pranks they do sometimes backfire and unfortunately may even have real world implications.&nbsp; Of course we realise that those of you reading the Editorial would never fall for any of these pranks but read on with care, you never know what you are going to find <span aria-label="Happy" class="emoticon-inline emoticon_happy" style="height:16px;width:16px;"></span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Users, Roles and Permissions with apiman</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>The <a class="jive-link-external-small" href="http://www.apiman.io/" rel="nofollow">apiman</a> project provides an Open Source solution for API Management allowing you to govern your APIs with a flexible, policy based runtime.&nbsp; The management of the runtime is controlled by permissions granted to a user through roles; these can either be the pre-defined set that comes with apiman or a custom based role that has been defined based on your requirements.&nbsp; The management of users, roles and permissions is straight forward within apiman, for more information on this topic check out Len's post where he <a class="jive-link-external-small" href="http://www.apiman.io/blog/apiman/introduction/overview/users/roles/2016/03/28/users_roles.html" rel="nofollow">discusses the details of the pre-defined roles and how to set up a special role for his brother in law</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Apache Camel 2.18 Roadmap</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>There are some big changes potentially coming to the Camel community, the recent release of Camel 2.17 will be the last to support JDK 7 with Camel 2.18 basing on JDK 8.&nbsp; If you are a user of Camel then now is the time to have your say about this change in direction, <a class="jive-link-external-small" href="http://www.davsclaus.com/2016/03/roadmap-for-apache-camel-218-and.html" rel="nofollow">Claus has some more information about the changes that may be headed your way along with details of where you can join in the conversation so that the community can make a decision that is best for all</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Blue/Green deployments with Fuse Integration Services</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Christina has been developing an Auto Dealership Management Demo as part of a series that discusses the advantages of using Fuse Integration Services.&nbsp; In the sixth installment of the series <a class="jive-link-external-small" href="http://wei-meilin.blogspot.ca/2016/03/fuse-integration-service-auto49.html" rel="nofollow">Christina discusses how you can make use of Blue/Green deployments to deploy a new version of your application while retaining the necessary high availability for your application</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Hibernate News</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>If you are interested in the <a class="jive-link-external-small" href="http://hibernate.org/" rel="nofollow">Hibernate</a> community then the <a class="jive-link-external-small" href="http://in.relation.to/2016/03/28/hibernate-community-newsletter-2016-7/" rel="nofollow">Hibernate Community Newsletter</a> is always worth following, a regular newsletter that highlights many of the hibernates articles that have been published along with interesting discussions that have been taking place on the forums and on StackOverflow.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>BRMS Application Development in the Cloud</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>As part of his <a class="jive-link-external-small" href="http://www.schabell.org/2016/02/appdev-cloud-stack-cant-ignore-stack-anymore.html" rel="nofollow">App Dev Cloud Stack series</a> Eric Schabell has often discussed why application developers can no longer ignore the stack.&nbsp; In previous posts he has covered the <a class="jive-link-external-small" href="https://www.redhat.com/en/about/blog/introducing-red-hat-container-development-kit-2-beta" rel="nofollow">Container Development&nbsp; Kit (CDK)</a> and its part in the puzzle, he is now moving up the stack to discuss the <a class="jive-link-external-small" href="http://www.schabell.org/2016/03/real-appdev-in-cloud-jboss-brms-install-demo.html" rel="nofollow">BRMS tooling and show how this can be installed within the Cloud environment</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>New Releases</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><ul><li>The <a class="jive-link-external-small" href="http://www.apiman.io/" rel="nofollow">apiman</a> team have announced the release of <a class="jive-link-external-small" href="http://www.apiman.io/blog/apiman/release/2016/03/24/release-1.2.3.html" rel="nofollow">apiman 1.2.3.Final</a>.</li><li>The <a class="jive-link-external-small" href="http://teiid.org/" rel="nofollow">teiid</a> team have announced the release of <a class="jive-link-external-small" href="http://teiid.blogspot.ca/2016/03/teiid-8133-released.html" rel="nofollow">Teiid 8.13.3</a>.</li><li>The <a class="jive-link-external-small" href="http://infinispan.org/" rel="nofollow">Infinispan</a> team have announced the release of the <a class="jive-link-external-small" href="http://blog.infinispan.org/2016/03/javascript-client-020-arrives-with.html" rel="nofollow">Infinispan Javascript client 0.2.0</a>.</li><li>The <a class="jive-link-external-small" href="http://hawkular.org/" rel="nofollow">Hawkular</a> team have announced the release of <a class="jive-link-external-small" href="http://www.hawkular.org/blog/2016/03/29/hawkular-metrics-0.14.0.Final-released.html" rel="nofollow">Hawkular Metrics 0.14.0</a>.</li><li>The <a class="jive-link-external-small" href="http://camel.apache.org/" rel="nofollow">Apache Camel</a> team have announced the release of <a class="jive-link-external-small" href="http://www.davsclaus.com/2016/03/apache-camel-217-released.html" rel="nofollow">Apache Camel 2.17</a>.</li></ul><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>That's all from this week's editorial, I hope you managed to get through it unscathed and will join us again next week for some more news from around the JBoss Community.</p></div><!-- [DocumentBodyEnd:bfbae0d0-9a65-4bc4-93bd-dc415c73d119] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:bfbae0d0-9a65-4bc4-93bd-dc415c73d119] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;April Fools' Day traditionally involves the playing of pranks and hoaxes on others, often with media and other organisations making announcements that are then later exposed as jokes.&amp;nbsp; While these are mostly harmless pranks they do sometimes backfire and unfortunately may even have real world implications.&amp;nbsp; Of course we realise that those of you reading the Editorial would never fall for any of these pranks but read on with care, you never know what you are going to find &lt;span aria-label="Happy"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Users, Roles and Permissions with apiman&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The &lt;a href="http://www.apiman.io/" rel="nofollow" target="_blank"&gt;apiman&lt;/a&gt; project provides an Open Source solution for API Management allowing you to govern your APIs with a flexible, policy based runtime.&amp;nbsp; The management of the runtime is controlled by permissions granted to a user through roles; these can either be the pre-defined set that comes with apiman or a custom based role that has been defined based on your requirements.&amp;nbsp; The management of users, roles and permissions is straight forward within apiman, for more information on this topic check out Len's post where he &lt;a href="http://www.apiman.io/blog/apiman/introduction/overview/users/roles/2016/03/28/users_roles.html" rel="nofollow" target="_blank"&gt;discusses the details of the pre-defined roles and how to set up a special role for his brother in law&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Apache Camel 2.18 Roadmap&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;There are some big changes potentially coming to the Camel community, the recent release of Camel 2.17 will be the last to support JDK 7 with Camel 2.18 basing on JDK 8.&amp;nbsp; If you are a user of Camel then now is the time to have your say about this change in direction, &lt;a href="http://www.davsclaus.com/2016/03/roadmap-for-apache-camel-218-and.html" rel="nofollow" target="_blank"&gt;Claus has some more information about the changes that may be headed your way along with details of where you can join in the conversation so that the community can make a decision that is best for all&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Blue/Green deployments with Fuse Integration Services&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Christina has been developing an Auto Dealership Management Demo as part of a series that discusses the advantages of using Fuse Integration Services.&amp;nbsp; In the sixth installment of the series &lt;a href="http://wei-meilin.blogspot.ca/2016/03/fuse-integration-service-auto49.html" rel="nofollow" target="_blank"&gt;Christina discusses how you can make use of Blue/Green deployments to deploy a new version of your application while retaining the necessary high availability for your application&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Hibernate News&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;If you are interested in the &lt;a href="http://hibernate.org/" rel="nofollow" target="_blank"&gt;Hibernate&lt;/a&gt; community then the &lt;a href="http://in.relation.to/2016/03/28/hibernate-community-newsletter-2016-7/" rel="nofollow" target="_blank"&gt;Hibernate Community Newsletter&lt;/a&gt; is always worth following, a regular newsletter that highlights many of the hibernates articles that have been published along with interesting discussions that have been taking place on the forums and on StackOverflow.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;BRMS Application Development in the Cloud&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;As part of his &lt;a href="http://www.schabell.org/2016/02/appdev-cloud-stack-cant-ignore-stack-anymore.html" rel="nofollow" target="_blank"&gt;App Dev Cloud Stack series&lt;/a&gt; Eric Schabell has often discussed why application developers can no longer ignore the stack.&amp;nbsp; In previous posts he has covered the &lt;a href="https://www.redhat.com/en/about/blog/introducing-red-hat-container-development-kit-2-beta" rel="nofollow" target="_blank"&gt;Container Development&amp;nbsp; Kit (CDK)&lt;/a&gt; and its part in the puzzle, he is now moving up the stack to discuss the &lt;a href="http://www.schabell.org/2016/03/real-appdev-in-cloud-jboss-brms-install-demo.html" rel="nofollow" target="_blank"&gt;BRMS tooling and show how this can be installed within the Cloud environment&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;New Releases&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The &lt;a href="http://www.apiman.io/" rel="nofollow" target="_blank"&gt;apiman&lt;/a&gt; team have announced the release of &lt;a href="http://www.apiman.io/blog/apiman/release/2016/03/24/release-1.2.3.html" rel="nofollow" target="_blank"&gt;apiman 1.2.3.Final&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;The &lt;a href="http://teiid.org/" rel="nofollow" target="_blank"&gt;teiid&lt;/a&gt; team have announced the release of &lt;a href="http://teiid.blogspot.ca/2016/03/teiid-8133-released.html" rel="nofollow" target="_blank"&gt;Teiid 8.13.3&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;The &lt;a href="http://infinispan.org/" rel="nofollow" target="_blank"&gt;Infinispan&lt;/a&gt; team have announced the release of the &lt;a href="http://blog.infinispan.org/2016/03/javascript-client-020-arrives-with.html" rel="nofollow" target="_blank"&gt;Infinispan Javascript client 0.2.0&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;The &lt;a href="http://hawkular.org/" rel="nofollow" target="_blank"&gt;Hawkular&lt;/a&gt; team have announced the release of &lt;a href="http://www.hawkular.org/blog/2016/03/29/hawkular-metrics-0.14.0.Final-released.html" rel="nofollow" target="_blank"&gt;Hawkular Metrics 0.14.0&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;The &lt;a href="http://camel.apache.org/" rel="nofollow" target="_blank"&gt;Apache Camel&lt;/a&gt; team have announced the release of &lt;a href="http://www.davsclaus.com/2016/03/apache-camel-217-released.html" rel="nofollow" target="_blank"&gt;Apache Camel 2.17&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;That's all from this week's editorial, I hope you managed to get through it unscathed and will join us again next week for some more news from around the JBoss Community.&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:bfbae0d0-9a65-4bc4-93bd-dc415c73d119] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/3d1yoFEqdi8" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-04-01T17:03:26+00:00</updated>
+	<author><name>Kevin Conner</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+	<category term="hibernate" />
+
+	<category term="teiid" />
+
+	<category term="infinispan" />
+
+	<category term="brms" />
+
+	<category term="camel" />
+
+	<category term="weekly_update" />
+
+	<category term="news" />
+
+	<category term="weekly_editorial" />
+
+	<category term="fuse" />
+
+	<category term="apiman" />
+
+	<category term="hawkular" />
+
+	<category term="fis" />
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/04/01/this-week-in-jboss-1st-april-2016-no-fooling-you</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/03/24/this-week-in-jboss-25th-march-2016-api-governance-turn-on-db-to-event-streams</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/sYtkj6lvc0g/this-week-in-jboss-25th-march-2016-api-governance-turn-on-db-to-event-streams" rel="alternate" type="text/html" />
+	<title>This week in JBoss (25th March 2016): Api Governance, Turn on DB to event streams</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:d559df0e-e94c-4dc9-8d5d-edb6f560c08e] --><div class="jive-rendered-content"><p style="font-size: 13.3333px;">This week has been horrible for many of us after the tragic events that took place in Brussels this Tuesday the 22th of March. But as the show must go on, you will find hereafter another edition of the JBoss Weekly Editorial where we bring you up to speed with all that has been happening across the JBoss Communities.</p><p style="min-height: 8pt; padding: 0px; font-size: 13.3333px;">&nbsp;</p><h2>SOA Governance with the Api Catalog</h2><p style="font-size: 13.3333px;"><span style="font-size: 10pt; line-height: 1.5em;"><br/></span></p><p>Our middleware products offering has always suffered the comparison with the competition due to the lack of a SOA Service registry or catalog and the tooling that we need to manage / import services/apis. <span style="font-size: 10pt; line-height: 1.5em;">Hopefully, the situation is changing and as we can now use the API Catalog feature proposed by the Apiman project to :</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><table border="0px" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;center&quot;,&quot;padding&quot;:&quot;2&quot;}" style="border: 0px solid #ffffff; width: 100%;"><tbody><tr><td style="border:0pxpx solid black;border: 0px solid #ffffff;background-color: rgba(0, 0, 0, 0);vertical-align: baseline;font-family: arial, helvetica, sans-serif;text-align: left;color: #575757;padding: 2px;"><a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5894-25715/Screenshot+2016-03-24+10.09.47.png"><img alt="Screenshot 2016-03-24 10.09.47.png" class="jive-image image-1" height="186" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5894-25715/425-186/Screenshot+2016-03-24+10.09.47.png" style="height: 185.766px; width:425px;" width="425"/></a></td><td style="border:0pxpx solid black;border: 0px solid #ffffff;background-color: rgba(0, 0, 0, 0);vertical-align: baseline;font-family: arial, helvetica, sans-serif;text-align: left;color: #575757;padding: 2px;"><ul><li>Manage for an organisation the APIs / Services that we can propose,</li><li>Import existing Apis (REST or Web Services endpoints) from a WADL file or a Swagger file,</li><li>Build our own catalog using the Api Catalog Plugin or a Catalog File</li></ul></td></tr></tbody></table><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Thank to Eric Wittman which has <a class="jive-link-external-small" href="http://www.apiman.io/blog/apiman/1.2.x/manager/catalog/2016/03/23/api-catalog.html" rel="nofollow">blogged around that</a> recently !</p><p style="min-height: 8pt; padding: 0px; font-size: 13.3333px;">&nbsp;</p><h2>Turn on a Database to Event Streams with Debezium</h2><p style="min-height: 8pt; padding: 0px; font-size: 13.3333px;">&nbsp;</p><p><a class="jive-link-external-small" href="https://github.com/debezium/debezium" rel="nofollow">Debezium</a> is a distributed platform that turns your existing databases into <span style="font-size: 10pt; line-height: 1.5em;">event streams, so applications can see and respond almost instantly to each</span></p><p>committed row-level change in the databases. Debezium is built on top of <a class="jive-link-external-small" href="http://kafka.apache.org/" rel="nofollow">Apache </a><span style="font-size: 10pt; line-height: 1.5em;"><a class="jive-link-external-small" href="http://kafka.apache.org/" rel="nofollow">Kafka</a> and provides Kafka Connect compatible connectors that monitor </span><span style="font-size: 10pt; line-height: 1.5em;">specific database management systems.</span></p><p><span style="font-size: 10pt; line-height: 1.5em;">Debezium records the history of data </span><span style="font-size: 10pt; line-height: 1.5em;">changes in Kafka logs, so your application can be stopped and restarted at</span></p><p>any time and can easily consume all of the events it missed while it was <span style="font-size: 10pt; line-height: 1.5em;">not running, ensuring that all events are processed correctly and</span></p><p>completely !</p><p>Debezium has been designed around these architecture patterns : <em>Change Data Capture</em> (<a class="jive-link-external-small" href="https://en.wikipedia.org/wiki/Change_data_capture" rel="nofollow">CDC</a>) and <em>Command Query Responsibility Separation</em> (<a class="jive-link-external-small" href="http://martinfowler.com/bliki/CQRS.html" rel="nofollow">CQRS</a>)</p><p style="min-height: 8pt; padding: 0px; font-size: 13.3333px;">&nbsp;</p><h2>Hibernate Search &amp; Elasticsearch</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Hibernate Search can now store indexes and query from an Elasticsearch <span style="font-size: 10pt; line-height: 1.5em;">cluster. </span><span style="font-size: 10pt; line-height: 1.5em;">What's cool is that all of your Hibernate ORM applications can now be </span><span style="font-size: 10pt; line-height: 1.5em;">indexed by Elasticsearch. The index is kept synchronized with the </span><span style="font-size: 10pt; line-height: 1.5em;">database thanks to Hibernate Search.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>More info in these blog entries:</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span>* </span><a class="jive-link-external-small" href="http://in.relation.to/2016/02/29/HibernateSearchAlpha-Elasticsearch/" rel="nofollow">http://in.relation.to/2016/02/29/HibernateSearchAlpha-Elasticsearch/</a></p><p><span>* </span><a class="jive-link-external-small" href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow">http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/</a></p><h2></h2><h2>Evangelist's Corner</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Charles has released a collection of "In Action" projects hosted on the <a class="jive-link-external-small" href="https://github.com/FuseByExample" rel="nofollow">FuseByExample github</a> repository to play and discover the RedHat Middleware</p><p>technology using Apache Camel, JBoss Fuse, FeedHenry, Linux Container but also the security around the endpoints using Apiman &amp; Keycloak.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>- <a class="jive-link-external-small" href="https://github.com/FuseByExample/rest-dsl-in-action" rel="nofollow">REST DSL in Action</a> : Design REST endpoints using <a class="jive-link-external-small" href="http://camel.apache.org/rest-dsl.html" rel="nofollow">Apache Camel REST DSL</a> &amp; Swagger API, manage the info using ElasticSearch &amp; Kibana Dashboard</p><p>- <a class="jive-link-external-small" href="https://github.com/FuseByExample/enforcement-security-in-action" rel="nofollow">Enforcement Security in Action</a> : Secure Apache Camel endpoints using <a class="jive-link-external-small" href="http://www.apiman.io/latest/" rel="nofollow">Apiman</a> API Mngt &amp; <a class="jive-link-external-small" href="http://keycloak.jboss.org/" rel="nofollow">Keycloak</a> Web SSO servers (basic authentication, Oauth2)</p><p>- <a class="jive-link-external-small" href="https://github.com/FuseByExample/mobile-rest-in-action" rel="nofollow">Mobile &amp; REST in action</a> : Extend the project REST DSL in action project to run the application using <a class="jive-link-external-small" href="https://github.com/feedhenry/fh-js-sdk" rel="nofollow">Feedhenry js api,</a> AngularJS &amp; <a class="jive-link-external-small" href="https://cordova.apache.org/" rel="nofollow">Apache Cordova</a></p><p>- <a class="jive-link-external-small" href="https://github.com/FuseByExample/microservice-camel-in-action" rel="nofollow">MicroService in Action</a> : Turn on Apache Camel project as MicroServices running top of Linux Containers and loadbalance the services using Kubernetes</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Releases, release, releases ....</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><ul><li><a class="jive-link-external-small" href="https://planet.jboss.org/post/teiid_8_13_3_released" rel="nofollow">Teiid 8.13.3</a> Released</li><li><a class="jive-link-external-small" href="https://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha10_released" rel="nofollow">Arquillian Cube Extension 1.0.0.Alpha10</a> released</li><li><a class="jive-link-external-small" href="https://jdk9.java.net/download/" rel="nofollow">Early access of JDK9</a> including jigsaw available</li><li><a class="jive-link-external-small" href="https://github.com/debezium/debezium/tree/v0.1.0/debezium-embedded/README.md" rel="nofollow">Debezium 0.1</a> is available</li></ul><p style="min-height: 8pt; padding: 0px; font-size: 13.3333px;">&nbsp;</p><p style="font-size: 13.3333px;">I hope this week's editorial has provided you with something of interest, please join us again next week when we will bring you more news from JBoss and the JBoss Communities.</p></div><!-- [DocumentBodyEnd:d559df0e-e94c-4dc9-8d5d-edb6f560c08e] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:d559df0e-e94c-4dc9-8d5d-edb6f560c08e] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;This week has been horrible for many of us after the tragic events that took place in Brussels this Tuesday the 22th of March. But as the show must go on, you will find hereafter another edition of the JBoss Weekly Editorial where we bring you up to speed with all that has been happening across the JBoss Communities.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;SOA Governance with the Api Catalog&lt;/h2&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Our middleware products offering has always suffered the comparison with the competition due to the lack of a SOA Service registry or catalog and the tooling that we need to manage / import services/apis. &lt;span&gt;Hopefully, the situation is changing and as we can now use the API Catalog feature proposed by the Apiman project to :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;table border="0px" jive-data-cell='{"color":"#575757","textAlign":"left","padding":"2","backgroundColor":"transparent","fontFamily":"arial,helvetica,sans-serif","verticalAlign":"baseline"}' jive-data-header='{"color":"#FFFFFF","backgroundColor":"#6690BC","textAlign":"center","padding":"2"}'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5894-25715/Screenshot+2016-03-24+10.09.47.png" target="_blank"&gt;&lt;img alt="Screenshot 2016-03-24 10.09.47.png" height="186" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5894-25715/425-186/Screenshot+2016-03-24+10.09.47.png" width="425"&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;ul&gt;&lt;li&gt;Manage for an organisation the APIs / Services that we can propose,&lt;/li&gt;&lt;li&gt;Import existing Apis (REST or Web Services endpoints) from a WADL file or a Swagger file,&lt;/li&gt;&lt;li&gt;Build our own catalog using the Api Catalog Plugin or a Catalog File&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Thank to Eric Wittman which has &lt;a href="http://www.apiman.io/blog/apiman/1.2.x/manager/catalog/2016/03/23/api-catalog.html" rel="nofollow" target="_blank"&gt;blogged around that&lt;/a&gt; recently !&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Turn on a Database to Event Streams with Debezium&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/debezium/debezium" rel="nofollow" target="_blank"&gt;Debezium&lt;/a&gt; is a distributed platform that turns your existing databases into &lt;span&gt;event streams, so applications can see and respond almost instantly to each&lt;/span&gt;&lt;/p&gt;&lt;p&gt;committed row-level change in the databases. Debezium is built on top of &lt;a href="http://kafka.apache.org/" rel="nofollow" target="_blank"&gt;Apache &lt;/a&gt;&lt;span&gt;&lt;a href="http://kafka.apache.org/" rel="nofollow" target="_blank"&gt;Kafka&lt;/a&gt; and provides Kafka Connect compatible connectors that monitor &lt;/span&gt;&lt;span&gt;specific database management systems.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Debezium records the history of data &lt;/span&gt;&lt;span&gt;changes in Kafka logs, so your application can be stopped and restarted at&lt;/span&gt;&lt;/p&gt;&lt;p&gt;any time and can easily consume all of the events it missed while it was &lt;span&gt;not running, ensuring that all events are processed correctly and&lt;/span&gt;&lt;/p&gt;&lt;p&gt;completely !&lt;/p&gt;&lt;p&gt;Debezium has been designed around these architecture patterns : &lt;em&gt;Change Data Capture&lt;/em&gt; (&lt;a href="https://en.wikipedia.org/wiki/Change_data_capture" rel="nofollow" target="_blank"&gt;CDC&lt;/a&gt;) and &lt;em&gt;Command Query Responsibility Separation&lt;/em&gt; (&lt;a href="http://martinfowler.com/bliki/CQRS.html" rel="nofollow" target="_blank"&gt;CQRS&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Hibernate Search &amp;amp; Elasticsearch&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Hibernate Search can now store indexes and query from an Elasticsearch &lt;span&gt;cluster. &lt;/span&gt;&lt;span&gt;What's cool is that all of your Hibernate ORM applications can now be &lt;/span&gt;&lt;span&gt;indexed by Elasticsearch. The index is kept synchronized with the &lt;/span&gt;&lt;span&gt;database thanks to Hibernate Search.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;More info in these blog entries:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;* &lt;/span&gt;&lt;a href="http://in.relation.to/2016/02/29/HibernateSearchAlpha-Elasticsearch/" rel="nofollow" target="_blank"&gt;http://in.relation.to/2016/02/29/HibernateSearchAlpha-Elasticsearch/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;* &lt;/span&gt;&lt;a href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow" target="_blank"&gt;http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;Evangelist's Corner&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Charles has released a collection of "In Action" projects hosted on the &lt;a href="https://github.com/FuseByExample" rel="nofollow" target="_blank"&gt;FuseByExample github&lt;/a&gt; repository to play and discover the RedHat Middleware&lt;/p&gt;&lt;p&gt;technology using Apache Camel, JBoss Fuse, FeedHenry, Linux Container but also the security around the endpoints using Apiman &amp;amp; Keycloak.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;- &lt;a href="https://github.com/FuseByExample/rest-dsl-in-action" rel="nofollow" target="_blank"&gt;REST DSL in Action&lt;/a&gt; : Design REST endpoints using &lt;a href="http://camel.apache.org/rest-dsl.html" rel="nofollow" target="_blank"&gt;Apache Camel REST DSL&lt;/a&gt; &amp;amp; Swagger API, manage the info using ElasticSearch &amp;amp; Kibana Dashboard&lt;/p&gt;&lt;p&gt;- &lt;a href="https://github.com/FuseByExample/enforcement-security-in-action" rel="nofollow" target="_blank"&gt;Enforcement Security in Action&lt;/a&gt; : Secure Apache Camel endpoints using &lt;a href="http://www.apiman.io/latest/" rel="nofollow" target="_blank"&gt;Apiman&lt;/a&gt; API Mngt &amp;amp; &lt;a href="http://keycloak.jboss.org/" rel="nofollow" target="_blank"&gt;Keycloak&lt;/a&gt; Web SSO servers (basic authentication, Oauth2)&lt;/p&gt;&lt;p&gt;- &lt;a href="https://github.com/FuseByExample/mobile-rest-in-action" rel="nofollow" target="_blank"&gt;Mobile &amp;amp; REST in action&lt;/a&gt; : Extend the project REST DSL in action project to run the application using &lt;a href="https://github.com/feedhenry/fh-js-sdk" rel="nofollow" target="_blank"&gt;Feedhenry js api,&lt;/a&gt; AngularJS &amp;amp; &lt;a href="https://cordova.apache.org/" rel="nofollow" target="_blank"&gt;Apache Cordova&lt;/a&gt;&lt;/p&gt;&lt;p&gt;- &lt;a href="https://github.com/FuseByExample/microservice-camel-in-action" rel="nofollow" target="_blank"&gt;MicroService in Action&lt;/a&gt; : Turn on Apache Camel project as MicroServices running top of Linux Containers and loadbalance the services using Kubernetes&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Releases, release, releases ....&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://planet.jboss.org/post/teiid_8_13_3_released" rel="nofollow" target="_blank"&gt;Teiid 8.13.3&lt;/a&gt; Released&lt;/li&gt;&lt;li&gt;&lt;a href="https://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha10_released" rel="nofollow" target="_blank"&gt;Arquillian Cube Extension 1.0.0.Alpha10&lt;/a&gt; released&lt;/li&gt;&lt;li&gt;&lt;a href="https://jdk9.java.net/download/" rel="nofollow" target="_blank"&gt;Early access of JDK9&lt;/a&gt; including jigsaw available&lt;/li&gt;&lt;li&gt;&lt;a href="https://github.com/debezium/debezium/tree/v0.1.0/debezium-embedded/README.md" rel="nofollow" target="_blank"&gt;Debezium 0.1&lt;/a&gt; is available&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I hope this week's editorial has provided you with something of interest, please join us again next week when we will bring you more news from JBoss and the JBoss Communities.&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:d559df0e-e94c-4dc9-8d5d-edb6f560c08e] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/sYtkj6lvc0g" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-03-24T10:12:38+00:00</updated>
+	<author><name>Charles Moulliard</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+	<category term="hibernate" />
+
+	<category term="governance" />
+
+	<category term="api" />
+
+	<category term="apiman" />
+
+	<category term="debezium" />
+
+	<category term="fuse in action" />
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/03/24/this-week-in-jboss-25th-march-2016-api-governance-turn-on-db-to-event-streams</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/02/20/this-week-in-jboss-19th-february-2016-hibernate-cloud-and-more</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/kBvsCQsIQj4/this-week-in-jboss-19th-february-2016-hibernate-cloud-and-more" rel="alternate" type="text/html" />
+	<title>This week in JBoss (19th February 2016): Valentine's, New Releases and More...</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:f1d09a99-5038-4494-ab97-eb36e7104884] --><div class="jive-rendered-content"><p><a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5868-25624/Antique_Valentine_1909_01.jpg"><img alt="Antique_Valentine_1909_01.jpg" class="jive-image image-1" height="168" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5868-25624/106-168/Antique_Valentine_1909_01.jpg" style="height: 168.04px; width:106px; float: left;" width="106"/></a></p><p><span style="font-size: 10pt; line-height: 1.5em;">Welcome to another edition of the JBoss Weekly Editorial where we bring you up to speed with all that has been happening across the JBoss Communities.&nbsp; This past Sunday the 14th was Valentine's Day and so I thought I would share a little bit of history before moving onto the week</span><span style="font-size: 10pt; line-height: 1.5em;">.... </span></p><p><span style="font-size: 10pt; line-height: 1.5em;"><br/></span></p><p><span style="font-size: 10pt; line-height: 1.5em;">The day first became associated with romantic love within the circle of Geoffrey Chaucer in the 14th century, when the tradition of courtly love flourished. In 18th-century England, it evolved into an occasion in which love interest expressed their love for each other by presenting flowers, offering confectionery, and sending greeting cards (known as "valentines"). In Europe, Saint Valentine's Keys are given to love interest "as a romantic symbol and an invitation to unlock the giver&#8217;s heart", as well as to children, in order to ward off epilepsy (called Saint Valentine's Malady).&nbsp; Valentine's Day symbols that are used today include the heart-shaped outline, doves, and the figure of the winged Cupid. Since the 19th century, handwritten valentines have given way to mass-produced greeting cards as seen in the attached image.&nbsp; </span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>I hope everyone had a great Valentine's day as well as a great week. <span style="color: #ff0000;"> </span><span style="; color: #ff0000; font-size: 12pt;"><strong>So onto our Week in JBoss...</strong></span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;">New Releases</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><ul><li><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Teiid 8.13.1 is now </span><a class="jive-link-external-small" href="http://teiid.jboss.org/downloads/" rel="nofollow">available</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">.&nbsp; It is a fix release addressing 15 issues.</span></li><li><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px; line-height: 1.5em;">Hibernate Validator 5.2.4.Final is now </span><a class="jive-link-external-small" href="http://hibernate.org/validator/downloads/" rel="nofollow">available</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px; line-height: 1.5em;">. This is a bugfix release which addresses two issues around one of the more advanced features of Bean Validation and redefined default group sequences. </span></li><li><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;">Hibernate ORM 5.0.8.Final has just been </span><a class="jive-link-external-small" href="http://github.com/hibernate/hibernate-orm/releases/tag/5.0.8" rel="nofollow">tagged</a><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;"> and published.&nbsp; The complete list of changes can be found </span><a class="jive-link-external-small" href="https://hibernate.atlassian.net/projects/HHH/versions/22250" rel="nofollow">here</a><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;"> (or </span><a class="jive-link-external-small" href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;version=22250" rel="nofollow">here</a><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;"> for people without a Hibernate Jira account).</span></li><li><span style="line-height: 1.5em; color: #424242; font-size: 16px; font-family: Cabin, sans-serif;">JBoss Forge 3.0.0.CR1 is now <a class="jive-link-external-small" href="http://forge.jboss.org/news/forge-3.0.0.cr1-is-here" rel="nofollow">available</a>. Grab it while it is hot!</span></li><li><span style="line-height: 1.5em; color: #424242; font-size: 16px; font-family: Cabin, sans-serif;">Infinispan is proud </span><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">to announce <a class="jive-link-external-small" href="http://infinispan.org/download/" rel="nofollow">two fresh releases</a>.&nbsp; Fi</span><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px; line-height: 1.5em;">rst is 8.2.0.Beta2, from our development branch. The second is <span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">8.1.2.Final which contains bug fixes.</span></span></li><li><span style="line-height: 1.5em; color: #424242; font-size: 16px; font-family: Cabin, sans-serif;">Infinispan Javascipt Client 0.1.0 is now available.&nbsp; The <a class="jive-link-external-small" href="https://github.com/infinispan/js-client" rel="nofollow">Javascript client</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"> based on Node.js which can talk to Infinispan Server instances.</span></span></li><li><span style="line-height: 1.5em; color: #424242; font-size: 16px; font-family: Cabin, sans-serif;">Teiid 9.0 Alpha1 is now available. <span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">With the creation of the 8.13 transitional release, we are now ready to start the release stream for 9.0 with </span><a class="jive-link-external-small" href="http://teiid.jboss.org/downloads/" rel="nofollow">Alpha1</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">. Please consult the </span><a class="jive-link-external-small" href="https://teiid.gitbooks.io/documents/content/admin/Migration_Guide_From_Teiid_8.x.html" rel="nofollow">migration documentation</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"> from 8.x to 9, </span></span></li></ul><p><span style="line-height: 1.5em; color: #424242; font-size: 16px; font-family: Cabin, sans-serif;"><br/></span></p><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;">Cloud Stack Series</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Eric Schabell continues his tour of the Cloud stack continues from his previous article in a series where he laid the first foundational bricks, the reliable and container supporting operating system. The core machines on which our Cloud will rest, that support containers but obviously don't do much more than that.&nbsp; You can find more of articles in the series listed below.</span></p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"><br/></span></p><ol style="margin: 0 0 1.25rem 1.5em; font-size: 16px; list-style-position: outside; font-family: Cabin, sans-serif; color: #424242;"><li><a class="jive-link-external-small" href="http://www.schabell.org/2016/02/appdev-cloud-stack-cant-ignore-stack-anymore.html" rel="nofollow">Can&#8217;t ignore the stack anymore</a></li><li><a class="jive-link-external-small" href="http://www.schabell.org/2016/02/appdev-cloud-stack-foundations-for-stable-cloud.html" rel="nofollow">Foundations for a stable Cloud</a></li><li><a class="jive-link-external-small" href="http://www.schabell.org/2016/02/appdev-cloud-stack-beginners-guide-containers-at-scale.html" rel="nofollow">Beginners guide to containers at scale</a></li><li>Why containers at scale matter (coming soon...)</li><li>It&#8217;s all about the PaaS baby (coming soon...)</li><li>Open interoperability critical to success (coming soon...)</li><li>Securing containers at scale (coming soon...)</li></ol><h2 style="font-weight: normal; margin: 0.2rem 0px 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;"><a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5868-25625/codemotion-ams.png"><img alt="codemotion-ams.png" class="jive-image image-2" height="150" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5868-25625/269-150/codemotion-ams.png" style="height: 149.631px; float: left; width:269px;" width="269"/></a></h2><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;"></h2><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;">Codemotion Amsterdam 2016</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">This coming Spring there will be a </span><a class="jive-link-external-small" href="http://amsterdam2016.codemotionworld.com/" rel="nofollow">CodeMotion conference in Amsterdam</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"> in May from 11th - 12th, 2016.&nbsp; T<span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">he </span><a class="jive-link-external-small" href="http://speaker.codemotionworld.com/c4p.php" rel="nofollow">Call for Papers</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"> is open until Feb 15, 2016.&nbsp; Eric shared his talk submissions <a class="jive-link-external-small" href="http://planet.jboss.org/post/codemotion_amsterdam_2016_cloud_private_paas_bpm_sessions_galore" rel="nofollow">here</a>.</span></span></p><p><span style="color: #424242; font-size: 16px; font-family: Cabin, sans-serif;"><br/></span></p><h2 style="font-weight: normal; margin: 0.2rem 0 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;"></h2><h2 style="font-weight: normal; margin: 0.2rem 0 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;"></h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2 style="font-weight: normal; margin: 0.2rem 0 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;">Hibernate Documentation</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Vlad Mihalcea shared with us the New Hibernate <a class="jive-link-external-small" href="http://planet.jboss.org/post/the_new_hibernate_orm_user_guide" rel="nofollow">ORM User Guide</a> and the <a class="jive-link-external-small" href="http://planet.jboss.org/post/hibernate_community_newsletter_4_2016" rel="nofollow">Hibernate Community Newletter</a>.&nbsp; <span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Starting this year, they are hosting a series of articles focused on the Hibernate community. They share blog posts, forum and StackOverflow questions that are especially relevant to their users.&nbsp;&nbsp; Also, they<span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"> announced that the new Hibernate ORM User Guide has become the default Hibernate 5.1 reference documentation. This process was started last summer, and it was one of the primary goals of the Hibernate 5 project version. </span></span></span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2 style="font-weight: normal; margin: 0.2rem 0 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;">Decision-as-a-Service Webinar</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Edson Tirelli announced that </span><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Red Hat will be hosting a free webinar on Tuesday, Feb 23rd, on Decisions-as-a-Service with Drools/Red Hat BRMS.&nbsp;&nbsp; </span><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">This is the perfect opportunity to watch how easy it is to author and publish decision services with Drools/Red Hat BRMS.&nbsp; </span><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">For more details and to register, click </span><a class="jive-link-external-small" href="https://vts.inxpo.com/Launch/QReg.htm?ShowKey=30255&amp;AffiliateData=social" rel="nofollow">here</a><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">.</span></p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"><br/></span></p><h2 style="font-weight: normal; margin: 0.2rem 0 0.5rem; font-size: 2.3125rem; font-family: Cabin, sans-serif; color: #656565;">JSON Web Tokens</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;">Stan Silvert attended DevNexus in Atlanta and discusses the <a class="jive-link-external-small" href="http://planet.jboss.org/post/musing_on_json_web_tokens" rel="nofollow">JSON Web Tokens (JWT)</a>.&nbsp; </span></p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"><br/></span></p><p><span style="color: #424242; font-family: Cabin, sans-serif; font-size: 16px;"><br/></span></p><p><span style="color: #000080; font-size: 37px; font-family: Cabin, sans-serif;">Thanks for reading and being a part of a great community....</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="font-size: 14pt;">Kenneth Peeples</span></p><p><span style="font-size: 14pt;">@ossmentor</span></p><p><a class="jive-link-email-small" href="mailto:kpeeples@shadow-soft.com" rel="nofollow"><span style="font-size: 14pt;">kpeeples@shadow-soft.com</span></a></p><p><span style="font-size: 14pt;"><a class="jive-link-external-small" href="http://shadow-soft.com/" rel="nofollow">http://shadow-soft.com/</a></span></p><p><span style="font-size: 14pt;"><br/></span></p></div><!-- [DocumentBodyEnd:f1d09a99-5038-4494-ab97-eb36e7104884] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:f1d09a99-5038-4494-ab97-eb36e7104884] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5868-25624/Antique_Valentine_1909_01.jpg" target="_blank"&gt;&lt;img alt="Antique_Valentine_1909_01.jpg" height="168" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5868-25624/106-168/Antique_Valentine_1909_01.jpg" width="106"&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Welcome to another edition of the JBoss Weekly Editorial where we bring you up to speed with all that has been happening across the JBoss Communities.&amp;nbsp; This past Sunday the 14th was Valentine's Day and so I thought I would share a little bit of history before moving onto the week&lt;/span&gt;&lt;span&gt;.... &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;The day first became associated with romantic love within the circle of Geoffrey Chaucer in the 14th century, when the tradition of courtly love flourished. In 18th-century England, it evolved into an occasion in which love interest expressed their love for each other by presenting flowers, offering confectionery, and sending greeting cards (known as "valentines"). In Europe, Saint Valentine's Keys are given to love interest "as a romantic symbol and an invitation to unlock the giver&amp;rsquo;s heart", as well as to children, in order to ward off epilepsy (called Saint Valentine's Malady).&amp;nbsp; Valentine's Day symbols that are used today include the heart-shaped outline, doves, and the figure of the winged Cupid. Since the 19th century, handwritten valentines have given way to mass-produced greeting cards as seen in the attached image.&amp;nbsp; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I hope everyone had a great Valentine's day as well as a great week. &lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;strong&gt;So onto our Week in JBoss...&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;New Releases&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Teiid 8.13.1 is now &lt;/span&gt;&lt;a href="http://teiid.jboss.org/downloads/" rel="nofollow" target="_blank"&gt;available&lt;/a&gt;&lt;span&gt;.&amp;nbsp; It is a fix release addressing 15 issues.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Hibernate Validator 5.2.4.Final is now &lt;/span&gt;&lt;a href="http://hibernate.org/validator/downloads/" rel="nofollow" target="_blank"&gt;available&lt;/a&gt;&lt;span&gt;. This is a bugfix release which addresses two issues around one of the more advanced features of Bean Validation and redefined default group sequences. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Hibernate ORM 5.0.8.Final has just been &lt;/span&gt;&lt;a href="http://github.com/hibernate/hibernate-orm/releases/tag/5.0.8" rel="nofollow" target="_blank"&gt;tagged&lt;/a&gt;&lt;span&gt; and published.&amp;nbsp; The complete list of changes can be found &lt;/span&gt;&lt;a href="https://hibernate.atlassian.net/projects/HHH/versions/22250" rel="nofollow" target="_blank"&gt;here&lt;/a&gt;&lt;span&gt; (or &lt;/span&gt;&lt;a href="https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10031&amp;amp;version=22250" rel="nofollow" target="_blank"&gt;here&lt;/a&gt;&lt;span&gt; for people without a Hibernate Jira account).&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;JBoss Forge 3.0.0.CR1 is now &lt;a href="http://forge.jboss.org/news/forge-3.0.0.cr1-is-here" rel="nofollow" target="_blank"&gt;available&lt;/a&gt;. Grab it while it is hot!&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Infinispan is proud &lt;/span&gt;&lt;span&gt;to announce &lt;a href="http://infinispan.org/download/" rel="nofollow" target="_blank"&gt;two fresh releases&lt;/a&gt;.&amp;nbsp; Fi&lt;/span&gt;&lt;span&gt;rst is 8.2.0.Beta2, from our development branch. The second is &lt;span&gt;8.1.2.Final which contains bug fixes.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Infinispan Javascipt Client 0.1.0 is now available.&amp;nbsp; The &lt;a href="https://github.com/infinispan/js-client" rel="nofollow" target="_blank"&gt;Javascript client&lt;/a&gt;&lt;span&gt; based on Node.js which can talk to Infinispan Server instances.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Teiid 9.0 Alpha1 is now available. &lt;span&gt;With the creation of the 8.13 transitional release, we are now ready to start the release stream for 9.0 with &lt;/span&gt;&lt;a href="http://teiid.jboss.org/downloads/" rel="nofollow" target="_blank"&gt;Alpha1&lt;/a&gt;&lt;span&gt;. Please consult the &lt;/span&gt;&lt;a href="https://teiid.gitbooks.io/documents/content/admin/Migration_Guide_From_Teiid_8.x.html" rel="nofollow" target="_blank"&gt;migration documentation&lt;/a&gt;&lt;span&gt; from 8.x to 9, &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;Cloud Stack Series&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Eric Schabell continues his tour of the Cloud stack continues from his previous article in a series where he laid the first foundational bricks, the reliable and container supporting operating system. The core machines on which our Cloud will rest, that support containers but obviously don't do much more than that.&amp;nbsp; You can find more of articles in the series listed below.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;a href="http://www.schabell.org/2016/02/appdev-cloud-stack-cant-ignore-stack-anymore.html" rel="nofollow" target="_blank"&gt;Can&amp;rsquo;t ignore the stack anymore&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://www.schabell.org/2016/02/appdev-cloud-stack-foundations-for-stable-cloud.html" rel="nofollow" target="_blank"&gt;Foundations for a stable Cloud&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://www.schabell.org/2016/02/appdev-cloud-stack-beginners-guide-containers-at-scale.html" rel="nofollow" target="_blank"&gt;Beginners guide to containers at scale&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Why containers at scale matter (coming soon...)&lt;/li&gt;&lt;li&gt;It&amp;rsquo;s all about the PaaS baby (coming soon...)&lt;/li&gt;&lt;li&gt;Open interoperability critical to success (coming soon...)&lt;/li&gt;&lt;li&gt;Securing containers at scale (coming soon...)&lt;/li&gt;&lt;/ol&gt;&lt;h2&gt;&lt;a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5868-25625/codemotion-ams.png" target="_blank"&gt;&lt;img alt="codemotion-ams.png" height="150" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5868-25625/269-150/codemotion-ams.png" width="269"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;Codemotion Amsterdam 2016&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;This coming Spring there will be a &lt;/span&gt;&lt;a href="http://amsterdam2016.codemotionworld.com/" rel="nofollow" target="_blank"&gt;CodeMotion conference in Amsterdam&lt;/a&gt;&lt;span&gt; in May from 11th - 12th, 2016.&amp;nbsp; T&lt;span&gt;he &lt;/span&gt;&lt;a href="http://speaker.codemotionworld.com/c4p.php" rel="nofollow" target="_blank"&gt;Call for Papers&lt;/a&gt;&lt;span&gt; is open until Feb 15, 2016.&amp;nbsp; Eric shared his talk submissions &lt;a href="http://planet.jboss.org/post/codemotion_amsterdam_2016_cloud_private_paas_bpm_sessions_galore" rel="nofollow" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Hibernate Documentation&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Vlad Mihalcea shared with us the New Hibernate &lt;a href="http://planet.jboss.org/post/the_new_hibernate_orm_user_guide" rel="nofollow" target="_blank"&gt;ORM User Guide&lt;/a&gt; and the &lt;a href="http://planet.jboss.org/post/hibernate_community_newsletter_4_2016" rel="nofollow" target="_blank"&gt;Hibernate Community Newletter&lt;/a&gt;.&amp;nbsp; &lt;span&gt;Starting this year, they are hosting a series of articles focused on the Hibernate community. They share blog posts, forum and StackOverflow questions that are especially relevant to their users.&amp;nbsp;&amp;nbsp; Also, they&lt;span&gt; announced that the new Hibernate ORM User Guide has become the default Hibernate 5.1 reference documentation. This process was started last summer, and it was one of the primary goals of the Hibernate 5 project version. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Decision-as-a-Service Webinar&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Edson Tirelli announced that &lt;/span&gt;&lt;span&gt;Red Hat will be hosting a free webinar on Tuesday, Feb 23rd, on Decisions-as-a-Service with Drools/Red Hat BRMS.&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;span&gt;This is the perfect opportunity to watch how easy it is to author and publish decision services with Drools/Red Hat BRMS.&amp;nbsp; &lt;/span&gt;&lt;span&gt;For more details and to register, click &lt;/span&gt;&lt;a href="https://vts.inxpo.com/Launch/QReg.htm?ShowKey=30255&amp;amp;AffiliateData=social" rel="nofollow" target="_blank"&gt;here&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;JSON Web Tokens&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Stan Silvert attended DevNexus in Atlanta and discusses the &lt;a href="http://planet.jboss.org/post/musing_on_json_web_tokens" rel="nofollow" target="_blank"&gt;JSON Web Tokens (JWT)&lt;/a&gt;.&amp;nbsp; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Thanks for reading and being a part of a great community....&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Kenneth Peeples&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;@ossmentor&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:kpeeples@shadow-soft.com" rel="nofollow" target="_blank"&gt;&lt;span&gt;kpeeples@shadow-soft.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;a href="http://shadow-soft.com/" rel="nofollow" target="_blank"&gt;http://shadow-soft.com/&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:f1d09a99-5038-4494-ab97-eb36e7104884] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/kBvsCQsIQj4" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-03-22T15:12:17+00:00</updated>
+	<author><name>Kenneth Peeples</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+	<category term="hibernate" />
+
+	<category term="drools" />
+
+	<category term="teiid" />
+
+	<category term="infinispan" />
+
+	<category term="containers" />
+
+	<category term="openshift" />
+
+	<category term="keycloak" />
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/02/20/this-week-in-jboss-19th-february-2016-hibernate-cloud-and-more</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/03/05/this-week-in-jboss-3rd-march-2016-leap-into-open-source</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/-9LF5-Ew9pY/this-week-in-jboss-3rd-march-2016-leap-into-open-source" rel="alternate" type="text/html" />
+	<title>This week in JBoss (3rd March 2016): Leap into Open Source</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:b197975a-bb15-4ee2-8df4-96b277355dac] --><div class="jive-rendered-content"><p><span style="font-size: 12pt; color: #000000;"><br/></span></p><p><span style="color: #000000;"><a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5881-25651/leap+year.png"><img alt="leap year.png" height="217" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5881-25651/325-217/leap+year.png" style="float: left;" width="325"/></a></span></p><p><span style="font-size: 12pt; color: #000000;">This year we have one extra day to enjoy Open Source Software by JBoss.&nbsp; This past Monday was February 29th so I thought I would share why we have one extra day on the calendar every 4 years.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="font-size: 12pt; color: #000000;">One orbit of Earth around the Sun takes 365.2422 days&#8212;a little more than our Gregorian calendar&#8217;s 365. Adding an extra day, aka a leap day, to the calendar every 4 years brings the calendar in line and therefore synchronizes with the four seasons.&nbsp; Without leap days, the calendar would be off by 5 hours, 48 minutes, 45 seconds each year. After 100 years, the seasons would be off by 25 days. The extra leap day adjusts this drift.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="font-size: 12pt; color: #000000;">A year is a leap year if it is divisible by 4, but century years are not leap years unless they are divisible by 400.&nbsp; So, the years 1700, 1800, and 1900 were not leap years, but the year 2000 was. Non-leap years begin and end on the same day of the week.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="font-size: 12pt; color: #000000;">So to determine a leap year here is a quick algorithm:</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span style="font-size: 12pt; color: #000000;"><strong>if (year is not <span style="color: #000000;">divisible</span> by 4) then (it is a common year)</strong></span></p><p><span style="font-size: 12pt; color: #000000;"><strong>&nbsp; else if (year is not divisible by 100) then (it is a leap year)</strong></span></p><p><span style="font-size: 12pt; color: #000000;"><strong>&nbsp;&nbsp;&nbsp; else if (year is not divisible by 400) then (it is a common year)</strong></span></p><p><span style="font-size: 12pt; color: #000000;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else (it is a leap year)</strong></span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="color: #000000;">I hope everyone had a great week. <span style="font-size: 12pt;"><strong>So onto our Week in JBoss...</strong></span></span></p><p style="min-height: 8pt; padding: 0px; font-family: Cabin, sans-serif; font-size: 16px; color: #424242;">&nbsp;</p><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;"><span style="font-size: 14pt; color: #000000;">New Releases</span></h2><p><span style="font-size: 14pt; color: #000000;"><br/></span></p><ul><li><span style="color: #000000;"><span style="font-family: Cabin, sans-serif; font-size: 16px;">The first candidate for release <a class="jive-link-external-small" href="http://planet.jboss.org/post/infinispan_8_2_0_cr1_released" rel="nofollow"><span style="color: #000000;">Infinispan 8.2 (Infinispan 8.2.0.CR1)</span></a> is now </span><a class="jive-link-external-small" href="http://infinispan.org/download/" rel="nofollow"><span style="color: #000000;">available.</span></a>&nbsp; <span style="font-family: Cabin, sans-serif; font-size: 16px;">It brings several bug fixes, documentation polishing and support for Apache Lucene 5.5.0.</span></span></li><li><span style="color: #000000; font-family: Cabin, sans-serif; font-size: 16px;">The release <a class="jive-link-external-small" href="http://planet.jboss.org/post/hawkular_metrics_0_13_0_release" rel="nofollow"><span style="color: #000000;">0.13.0 of Hawkular Metrics</span></a> is announced. This release is anchored by Hawkular integration enhancements, under-the-cover refactorings and fixes, and a new bulk data generation tool.</span></li><li><span style="color: #000000; font-family: Cabin, sans-serif; font-size: 16px;"><span style="font-family: Cabin, sans-serif; font-size: 16px;"><a class="jive-link-external-small" href="http://planet.jboss.org/post/richfaces_4_5_14_final_release_announcement" rel="nofollow"><span style="color: #000000;">RichFaces 4.5.14.Final</span></a> is available for </span><a class="jive-link-external-small" href="http://downloads.jboss.org/richfaces/releases/4.5.X/4.5.14.Final/richfaces-distribution-4.5.14.Final.zip" rel="nofollow" style="color: #2664a2; font-family: Cabin, sans-serif; font-size: 16px;"><span style="color: #000000;">download</span></a><span style="font-family: Cabin, sans-serif; font-size: 16px;">.&nbsp; <span style="font-family: Cabin, sans-serif; font-size: 16px;">In this release we've implemented a long-requested feature - a menu for hiding columns in rich:extendedDataTable (you can see it action in the </span><a class="jive-link-external-small" href="http://showcase.richfaces.org/richfaces/component-sample.jsf?demo=extendedDataTable" rel="nofollow" style="color: #2664a2; font-family: Cabin, sans-serif; font-size: 16px;"><span style="color: #000000;">Showcase</span></a><span style="font-family: Cabin, sans-serif; font-size: 16px;">).</span></span></span></li><li><span style="color: #000000;"><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;">The first Alpha release of <a class="jive-link-external-small" href="http://planet.jboss.org/post/hibernate_search_5_6_0_alpha2_introduces_elasticsearch_integration" rel="nofollow"><span style="color: #000000;">Hibernate Search 5.6.0.Alpha2</span></a> now has experimental integration with </span><a class="jive-link-external-small" href="https://www.elastic.co/products/elasticsearch" rel="nofollow"><span style="color: #000000;">Elasticsearch.</span></a><span style="font-family: inherit; font-size: 1rem; line-height: 1.5em;">&nbsp; <span style="font-family: Cabin, sans-serif; font-size: 16px;">We also updated to use Apache Lucene 5.5 - the latest stable release of our favourite search engine - as of course we&#8217;re not abandoning our traditional users!</span></span></span></li><li><span style="line-height: 1.5em; color: #000000; font-size: 16px; font-family: Cabin, sans-serif;">The Arquillian team is proud to announce the <a class="jive-link-external-small" href="http://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha9_released" rel="nofollow"><span style="color: #000000;"><em>1.0.0.Alpha9</em> release of the </span></a><em><a class="jive-link-external-small" href="http://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha9_released" rel="nofollow"><span style="color: #000000;">Arquillian Cube Extension</span></a> </em>component.</span></li></ul><p><span style="line-height: 1.5em; color: #000000; font-size: 16px; font-family: Cabin, sans-serif;"><br/></span></p><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;"><span style="font-size: 14pt; color: #000000;">Fuse and Camel</span></h2><p><span style="font-size: 14pt; color: #000000;"><br/></span></p><p><span style="color: #000000;"><span style="line-height: 1.5em; font-size: 12pt;">Christina Lin shared part 2 of her <a class="jive-link-external-small" href="http://planet.jboss.org/post/fuse_integration_service_auto_dealership_management_demo_part_two" rel="nofollow"><span style="color: #000000;">Auto DealershipManagement Demo</span></a>.&nbsp; </span><span style="line-height: 1.5em; font-size: 16px; font-family: Cabin, sans-serif;">This series of blog is based on building an auto dealership management system on Fuse Integration Service. It creates three major functions in the system:</span></span></p><ul><li><span style="font-size: 12pt; color: #000000;">Sales report tracking </span></li><li><span style="font-size: 12pt; color: #000000;">Vehicle inventory status</span></li><li><span style="font-size: 12pt; color: #000000;">Customer IoT Service</span></li></ul><p><span style="font-size: 12pt; color: #000000;"><br/></span></p><p><span style="font-size: 12pt; color: #000000;">Claus Ibsen shared the<span style="font-family: Cabin, sans-serif; font-size: 16px;"> </span><a class="jive-link-external-small" href="http://www.davsclaus.com/2015/12/video-of-apache-camel-tooling-to-edit.html" rel="nofollow"><span style="color: #000000;">continuation of the video blogs</span></a><span style="font-family: Cabin, sans-serif; font-size: 16px;"> he has done about our development on the </span><a class="jive-link-external-small" href="http://fabric8.io/" rel="nofollow"><span style="color: #000000;">fabric8</span></a><span style="font-family: Cabin, sans-serif; font-size: 16px;"> Camel tools.&nbsp; He covers the <a class="jive-link-external-small" href="http://planet.jboss.org/post/camel_tools_to_add_or_edit_endpoints_from_current_cursor_positon" rel="nofollow"><span style="color: #000000;">camel tools to add or edit endpoints from the current cursor position</span></a>.</span><br/></span></p><p><span style="font-size: 14pt; color: #000000;"><br/></span></p><h2 style="margin: 0.2rem 0 0.5rem; font-family: Cabin, sans-serif; font-weight: normal; color: #656565; font-size: 2.3125rem;"><span style="font-size: 14pt; color: #000000;">KIE Server</span></h2><p><span style="font-size: 14pt; color: #000000;"><br/></span></p><p><span style="color: #000000; font-size: 12pt;">Maciej Swiderski shares the capabilities of the<a class="jive-link-external-small" href="http://planet.jboss.org/post/jbpm_ui_extension_on_kie_server" rel="nofollow"> jBPM UI extension on the KIE server</a>.</span>&nbsp; <span style="color: #000000; font-size: 12pt;">One of the most desired use case is to be able to visualize state of given process instance - including graphical annotations about which nodes are active and which are already completed, showing complete flow of the process instance.&nbsp; This has been added to KIE Server as part of jBPM UI extensions and provides following capabilities:</span></p><ul><li><span style="font-size: 12pt; color: #000000;">display process definition diagram as SVG</span></li><li><span style="font-size: 12pt; color: #000000;">display annotated process instance diagram as SVG</span><ul><li><span style="font-size: 12pt; color: #000000;">greyed out are completed nodes</span></li><li><span style="font-size: 12pt; color: #000000;">marked as red are active nodes</span></li></ul></li><li><span style="font-size: 12pt; color: #000000;">display structure of process forms</span></li><li><span style="color: #000000; font-size: 12pt;">display structure of task forms</span></li></ul><p><span style="color: #000000; font-size: 12pt;">He also shares what <a class="jive-link-external-small" href="http://planet.jboss.org/post/are_you_ready_to_dive_into_wildfly_swarm" rel="nofollow">Wildfly Swarm means in the context of the KIE Server</a>.<br/></span></p><p><span style="font-size: 14pt;"><br/></span></p><p><span style="color: #000000; font-size: 18.6667px; font-family: Cabin, sans-serif;">More from the week</span></p><p><span style="color: #000000; font-size: 12pt; font-family: Cabin, sans-serif;"><br/></span></p><ul><li><span style="color: #000000; font-size: 12pt; font-family: Cabin, sans-serif;">Eric Schabell shared more on the App Dev Cloud Stack Series on <a class="jive-link-external-small" href="http://planet.jboss.org/post/app_dev_cloud_stack_why_containers_at_scale_matter" rel="nofollow">Why containers at scale matter</a></span></li><li><span style="color: #000000; font-size: 12pt; font-family: Cabin, sans-serif;">Heiko Rupp shared <a class="jive-link-external-small" href="http://planet.jboss.org/post/send_iot_data_to_hawkular_full" rel="nofollow">Sending IoT data to Hawkular-full</a></span></li><li><span style="color: #000000; font-size: 12pt; font-family: Cabin, sans-serif;">Gunnar Morling shared <a class="jive-link-external-small" href="http://planet.jboss.org/post/converting_projection_results_of_full_text_queries_into_pojos" rel="nofollow">Converting projection results of full-text queries into POJOs</a></span></li><li><span style="color: #000000; font-size: 18.6667px; font-family: Cabin, sans-serif;"><span style="font-size: 12pt;">Vlad Mihalcea shared the <a class="jive-link-external-small" href="http://planet.jboss.org/post/hibernate_community_newsletter_5_2016" rel="nofollow">Hibernate Community newsletter 5/2016</a></span><br/></span></li></ul><p><span style="color: #000000; font-size: 18.6667px; font-family: Cabin, sans-serif;"><br/></span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="color: #000080; font-size: 37px;"><br/></span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="color: #000080; font-size: 37px;">Thanks for reading and being a part of a great community....</span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="color: #000080; font-size: 37px;"><br/></span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="font-size: 14pt;">Kenneth Peeples</span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="font-size: 14pt;">@ossmentor</span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="font-size: 14pt;"><a class="jive-link-email-small" href="mailto:kpeeples@shadow-soft.com" rel="nofollow" style="color: #2664a2;">kpeeples@shadow-soft.com</a></span></p><p style="font-family: Cabin, sans-serif; font-size: 16px; color: #424242;"><span style="font-size: 14pt;"><a class="jive-link-external-small" href="http://shadow-soft.com/" rel="nofollow">http://shadow-soft.com/</a><br/></span></p></div><!-- [DocumentBodyEnd:b197975a-bb15-4ee2-8df4-96b277355dac] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:b197975a-bb15-4ee2-8df4-96b277355dac] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;a href="https://developer.jboss.org/servlet/JiveServlet/showImage/38-5881-25651/leap+year.png" target="_blank"&gt;&lt;img alt="leap year.png" height="217" src="https://developer.jboss.org/servlet/JiveServlet/downloadImage/38-5881-25651/325-217/leap+year.png" width="325"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;This year we have one extra day to enjoy Open Source Software by JBoss.&amp;nbsp; This past Monday was February 29th so I thought I would share why we have one extra day on the calendar every 4 years.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;One orbit of Earth around the Sun takes 365.2422 days&amp;mdash;a little more than our Gregorian calendar&amp;rsquo;s 365. Adding an extra day, aka a leap day, to the calendar every 4 years brings the calendar in line and therefore synchronizes with the four seasons.&amp;nbsp; Without leap days, the calendar would be off by 5 hours, 48 minutes, 45 seconds each year. After 100 years, the seasons would be off by 25 days. The extra leap day adjusts this drift.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;A year is a leap year if it is divisible by 4, but century years are not leap years unless they are divisible by 400.&amp;nbsp; So, the years 1700, 1800, and 1900 were not leap years, but the year 2000 was. Non-leap years begin and end on the same day of the week.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;So to determine a leap year here is a quick algorithm:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;if (year is not &lt;span&gt;divisible&lt;/span&gt; by 4) then (it is a common year)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;&amp;nbsp; else if (year is not divisible by 100) then (it is a leap year)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; else if (year is not divisible by 400) then (it is a common year)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; else (it is a leap year)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;I hope everyone had a great week. &lt;span&gt;&lt;strong&gt;So onto our Week in JBoss...&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;&lt;span&gt;New Releases&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;&lt;span&gt;The first candidate for release &lt;a href="http://planet.jboss.org/post/infinispan_8_2_0_cr1_released" rel="nofollow" target="_blank"&gt;&lt;span&gt;Infinispan 8.2 (Infinispan 8.2.0.CR1)&lt;/span&gt;&lt;/a&gt; is now &lt;/span&gt;&lt;a href="http://infinispan.org/download/" rel="nofollow" target="_blank"&gt;&lt;span&gt;available.&lt;/span&gt;&lt;/a&gt;&amp;nbsp; &lt;span&gt;It brings several bug fixes, documentation polishing and support for Apache Lucene 5.5.0.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;The release &lt;a href="http://planet.jboss.org/post/hawkular_metrics_0_13_0_release" rel="nofollow" target="_blank"&gt;&lt;span&gt;0.13.0 of Hawkular Metrics&lt;/span&gt;&lt;/a&gt; is announced. This release is anchored by Hawkular integration enhancements, under-the-cover refactorings and fixes, and a new bulk data generation tool.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;a href="http://planet.jboss.org/post/richfaces_4_5_14_final_release_announcement" rel="nofollow" target="_blank"&gt;&lt;span&gt;RichFaces 4.5.14.Final&lt;/span&gt;&lt;/a&gt; is available for &lt;/span&gt;&lt;a href="http://downloads.jboss.org/richfaces/releases/4.5.X/4.5.14.Final/richfaces-distribution-4.5.14.Final.zip" rel="nofollow" target="_blank"&gt;&lt;span&gt;download&lt;/span&gt;&lt;/a&gt;&lt;span&gt;.&amp;nbsp; &lt;span&gt;In this release we've implemented a long-requested feature - a menu for hiding columns in rich:extendedDataTable (you can see it action in the &lt;/span&gt;&lt;a href="http://showcase.richfaces.org/richfaces/component-sample.jsf?demo=extendedDataTable" rel="nofollow" target="_blank"&gt;&lt;span&gt;Showcase&lt;/span&gt;&lt;/a&gt;&lt;span&gt;).&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;span&gt;The first Alpha release of &lt;a href="http://planet.jboss.org/post/hibernate_search_5_6_0_alpha2_introduces_elasticsearch_integration" rel="nofollow" target="_blank"&gt;&lt;span&gt;Hibernate Search 5.6.0.Alpha2&lt;/span&gt;&lt;/a&gt; now has experimental integration with &lt;/span&gt;&lt;a href="https://www.elastic.co/products/elasticsearch" rel="nofollow" target="_blank"&gt;&lt;span&gt;Elasticsearch.&lt;/span&gt;&lt;/a&gt;&lt;span&gt;&amp;nbsp; &lt;span&gt;We also updated to use Apache Lucene 5.5 - the latest stable release of our favourite search engine - as of course we&amp;rsquo;re not abandoning our traditional users!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;The Arquillian team is proud to announce the &lt;a href="http://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha9_released" rel="nofollow" target="_blank"&gt;&lt;span&gt;&lt;em&gt;1.0.0.Alpha9&lt;/em&gt; release of the &lt;/span&gt;&lt;/a&gt;&lt;em&gt;&lt;a href="http://planet.jboss.org/post/arquillian_cube_extension_1_0_0_alpha9_released" rel="nofollow" target="_blank"&gt;&lt;span&gt;Arquillian Cube Extension&lt;/span&gt;&lt;/a&gt; &lt;/em&gt;component.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;&lt;span&gt;Fuse and Camel&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;span&gt;Christina Lin shared part 2 of her &lt;a href="http://planet.jboss.org/post/fuse_integration_service_auto_dealership_management_demo_part_two" rel="nofollow" target="_blank"&gt;&lt;span&gt;Auto DealershipManagement Demo&lt;/span&gt;&lt;/a&gt;.&amp;nbsp; &lt;/span&gt;&lt;span&gt;This series of blog is based on building an auto dealership management system on Fuse Integration Service. It creates three major functions in the system:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Sales report tracking &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Vehicle inventory status&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Customer IoT Service&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Claus Ibsen shared the&lt;span&gt; &lt;/span&gt;&lt;a href="http://www.davsclaus.com/2015/12/video-of-apache-camel-tooling-to-edit.html" rel="nofollow" target="_blank"&gt;&lt;span&gt;continuation of the video blogs&lt;/span&gt;&lt;/a&gt;&lt;span&gt; he has done about our development on the &lt;/span&gt;&lt;a href="http://fabric8.io/" rel="nofollow" target="_blank"&gt;&lt;span&gt;fabric8&lt;/span&gt;&lt;/a&gt;&lt;span&gt; Camel tools.&amp;nbsp; He covers the &lt;a href="http://planet.jboss.org/post/camel_tools_to_add_or_edit_endpoints_from_current_cursor_positon" rel="nofollow" target="_blank"&gt;&lt;span&gt;camel tools to add or edit endpoints from the current cursor position&lt;/span&gt;&lt;/a&gt;.&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;&lt;span&gt;KIE Server&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Maciej Swiderski shares the capabilities of the&lt;a href="http://planet.jboss.org/post/jbpm_ui_extension_on_kie_server" rel="nofollow" target="_blank"&gt; jBPM UI extension on the KIE server&lt;/a&gt;.&lt;/span&gt;&amp;nbsp; &lt;span&gt;One of the most desired use case is to be able to visualize state of given process instance - including graphical annotations about which nodes are active and which are already completed, showing complete flow of the process instance.&amp;nbsp; This has been added to KIE Server as part of jBPM UI extensions and provides following capabilities:&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;display process definition diagram as SVG&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;display annotated process instance diagram as SVG&lt;/span&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;greyed out are completed nodes&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;marked as red are active nodes&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;display structure of process forms&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;display structure of task forms&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span&gt;He also shares what &lt;a href="http://planet.jboss.org/post/are_you_ready_to_dive_into_wildfly_swarm" rel="nofollow" target="_blank"&gt;Wildfly Swarm means in the context of the KIE Server&lt;/a&gt;.&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;More from the week&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Eric Schabell shared more on the App Dev Cloud Stack Series on &lt;a href="http://planet.jboss.org/post/app_dev_cloud_stack_why_containers_at_scale_matter" rel="nofollow" target="_blank"&gt;Why containers at scale matter&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Heiko Rupp shared &lt;a href="http://planet.jboss.org/post/send_iot_data_to_hawkular_full" rel="nofollow" target="_blank"&gt;Sending IoT data to Hawkular-full&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Gunnar Morling shared &lt;a href="http://planet.jboss.org/post/converting_projection_results_of_full_text_queries_into_pojos" rel="nofollow" target="_blank"&gt;Converting projection results of full-text queries into POJOs&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;span&gt;Vlad Mihalcea shared the &lt;a href="http://planet.jboss.org/post/hibernate_community_newsletter_5_2016" rel="nofollow" target="_blank"&gt;Hibernate Community newsletter 5/2016&lt;/a&gt;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Thanks for reading and being a part of a great community....&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Kenneth Peeples&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;@ossmentor&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;a href="mailto:kpeeples@shadow-soft.com" rel="nofollow" target="_blank"&gt;kpeeples@shadow-soft.com&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;a href="http://shadow-soft.com/" rel="nofollow" target="_blank"&gt;http://shadow-soft.com/&lt;/a&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:b197975a-bb15-4ee2-8df4-96b277355dac] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/-9LF5-Ew9pY" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-03-22T15:11:18+00:00</updated>
+	<author><name>Kenneth Peeples</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/03/05/this-week-in-jboss-3rd-march-2016-leap-into-open-source</feedburner:origLink></entry>
+
+<entry>
+	<id>https://developer.jboss.org/blogs/weekly-editorial/2016/03/18/this-week-in-jboss-18th-march-2016-bears-and-hawks-are-waking-up</id>
+	<link href="http://feedproxy.google.com/~r/jbossbuzz/~3/wAdsLEFxP7E/this-week-in-jboss-18th-march-2016-bears-and-hawks-are-waking-up" rel="alternate" type="text/html" />
+	<title>This week in JBoss (18th March 2016) : Bears and hawks are waking up</title>
+	<summary type="html"><![CDATA[<!-- [DocumentBodyStart:53608902-079c-4d3e-91f1-6b818dd120d9] --><div class="jive-rendered-content"><p><span style="line-height: 1.5em;"><em>If spring has yet to come to us (at least in Europe), there is a definitly a feeling of "waking up", all over the community. Projects are releasing, as they always do, but important milestones are coming - and with them, the release of crucial and exciting features...</em></span></p><p><span style="line-height: 1.5em;"><br/></span></p><h1><span style="line-height: 1.5em;">Waking up the bear</span></h1><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><div style="float: left; margin: 20px;"><a href="https://www.flickr.com/photos/120374925@N06/15181578762/in/photolist-p8xyrY-mEK4D2-tj2LWQ-cCDY2J-71KH5k-6X9tLn-dETF85-qNAp1e-bWyEz6-8kJKeQ-qYdo6a-d6oL4j-2GNw9w-5ngARR-czRneJ-GW7TX-daf8FW-c2LmS1-3EFj5x-6XdtvC-uCmH6h-8eXFpx-dELqiH-rfFg9v-8eXJRP-6LTfdv-45tCP3-c1WFs7-57gMxA-8ksRVd-87jK4f-5JJYwn-uFEXJ-9NTBMQ-ofT9A7-314PrR-8eXHxF-6wV44J-6xq7CY-9e2Hwz-cQbd8N-f2NLZa-bWhNhL-4eNaqs-9R41Ly-5qgX4T-oFSaKH-oscv9H-7UZd3-dek1qV" rel="nofollow"><img alt="brown bear at Skansen3-3" height="253" src="https://farm4.staticflickr.com/3878/15181578762_72e12fc20e_n.jpg" width="320"/></a></div><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>The Hibernate community has grown over the border of the Hibernate framework for a long time now. Numerous projects, like the <a class="jive-link-external-small" href="http://in.relation.to/2016/03/14/hibernate-orm-509-final-release/" rel="nofollow">Hibernate ORM (which just released 5.0.9.Final) </a><span style="font-size: 10pt; line-height: 1.5em;">and </span><span style="font-size: 10pt;"><a class="jive-link-external-small" href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow">Hibernate Search (which just 5.6.0.Alpha3)</a> </span><span style="font-size: 10pt; line-height: 1.5em;">are part of this blooming community.</span></p><p><span style="font-size: 10pt; line-height: 1.5em;"><br/></span></p><p><span style="font-size: 10pt; line-height: 1.5em;">Thus it was decided to set up a dedicated </span><a class="jive-link-external-small" href="http://in.relation.to/2016/03/14/hibernate-community-newsletter-2016-6/" rel="nofollow">Hibernate Community Newsletter</a><span style="font-size: 10pt; line-height: 1.5em;">, to allow people interest by all (or most) of those projects, to easily follow their activities.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2></h2><h2></h2><h2></h2><h2></h2><h2>In the Eye of the Hawkular</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><div style="margin: 20px; float: right;"><a href="https://www.flickr.com/photos/carlhaynes13/3919823409/in/photolist-6Yo7We-7tNWFT-3hETZ8-cCYTu1-9ULrqo-bcgshT-b8EcL4-jduvsj-fo4we1-aaUQYo-oatQzS-qTbi5V-3hKa6E-9ECzuX-dHN2Sn-k8b6A9-9ECzrr-DTL9au-9ca5Ts-9q816p-fRRnf3-biDt1H-47PSTr-cF6eEC-oZkHMr-eXQ81P-6nzva1-dTdwfB-biDq96-8K9Pvc-foG7qx-qaSJ1a-bddVe8-8npUL4-a64d85-B1RoM-9ca4tN-5absco-A8Xsq8-dgMdUH-a31RuE-fCYHsT-dQe9Mx-6opKUR-aPRgq6-C74b55-qQ2MMq-d8fvjh-A7onp-dGUYqA" rel="nofollow"><img alt="Hawk" height="180" src="https://farm4.staticflickr.com/3473/3919823409_a50d64da1d_m.jpg" width="240"/></a></div><p>On top of releasing the <a class="jive-link-external-small" href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow">1.0.0.Alpha11</a>, which is getting the project closer and closer to the 1.0.0 milestone, Hawkular team took the time to produce a <a class="jive-link-external-small" href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow">Hawkular features overview (1.0.0.Alpha11</a>). The article covers quickly how Hawkular can (graphically) monitor business transactions or application performance, alongside dealing with management operations and artifacts deployments.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Also, to show how flexible and extendable the project is, one of the developer, Heiko Rupp, produced a very intriguing blog entry on <a class="jive-link-external-small" href="http://pilhuhn.blogspot.de/2016/03/reacting-on-iot-data-with-hawkular.html" rel="nofollow">Reacting on IoT data with Hawkular</a><span style="font-size: 10pt; line-height: 1.5em;">. This new article is a follow up on his previous ones on</span><a class="jive-link-external-small" href="http://pilhuhn.blogspot.com/2016/02/sending-iot-sensor-data-to-hawkular.html" rel="nofollow"> Sending IoT sensor data to Hawkular-Metrics via MQTT</a><span style="font-size: 10pt; line-height: 1.5em;"> and </span><a class="jive-link-external-small" href="http://pilhuhn.blogspot.com/2016/02/send-iot-data-to-hawkular-full.html" rel="nofollow">Send IoT data to Hawkular-full</a><span style="font-size: 10pt; line-height: 1.5em;"> and all of them certainly forms an exciting testimony to the possibility offered by Hawkular.</span></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><h2>Evangelist's Corner</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Last week, Christina has released the part four of a her <a class="jive-link-external-small" href="http://wei-meilin.blogspot.de/2016/03/fuse-integration-service-auto_15.html" rel="nofollow">Fuse Integration Service demo on"Auto Dealership Management"</a></p><p>and, as always, Eric D. Schabell has been quite prolific and produced a guide on <a class="jive-link-external-small" href="http://www.schabell.org/2016/03/installing-redhat-cdk-beta-5-release.html" rel="nofollow">Installing the Red Hat Container Development Kit (CDK)</a><span style="font-size: 10pt; line-height: 1.5em;">, but also take the time to answer some questions on </span><a class="jive-link-external-small" href="http://www.schabell.org/2016/03/openshift-profiles-interview-eric-d-schabell.html" rel="nofollow">OpenShift Profiles (An interview with Eric D. Schabell)</a><span style="font-size: 10pt; line-height: 1.5em;"></span><span style="font-size: 10pt; line-height: 1.5em;">.</span></p><h2><br/>Events</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Worth to mention here is certainly the opening of the <a class="jive-link-external-small" href="http://rivieradev.fr/cfp" rel="nofollow">Call For Paper - Riveria Dev</a>, <span style="font-size: 10pt; line-height: 1.5em;">a conference located in the south of France, at Sophia-Antipolis, on the 16 and 17 June. The CfP itself closes on the 30th April. If you have the chance to be able to apply or attend, please do so, I only hear good things about this event !</span></p><h2></h2><h2>Releases, releases, releases...</h2><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>The JBoss community would not be as thriving as it is, if it were not to release as often as it does. Thus, this week is again having its fair share of interesting releases:</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><ul><li><a class="jive-link-external-small" href="http://forge.jboss.org/news/forge-3.0.0.final-is-here" rel="nofollow">JBoss Forge 3.0.0 Final</a> and already <a class="jive-link-external-small" href="http://forge.jboss.org/news/forge-3.0.1.final-is-here" rel="nofollow">JBoss Forge 3.0.1 Final</a></li><li><a class="jive-link-external-small" href="http://blog.infinispan.org/2016/03/infinispan-hadoop-connector-02-released.html" rel="nofollow">Infinispan Hadoop connector 0.2 released!</a></li><li><a class="jive-link-external-small" href="http://in.relation.to/2016/03/14/hibernate-orm-509-final-release/" rel="nofollow">Hibernate ORM 5.0.9.Final</a></li><li><a class="jive-link-external-small" href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow">Hawkular released 1.0.0.Alpha11</a></li><li><span style="font-size: 10pt; line-height: 1.5em;"><a class="jive-link-external-small" href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow">Hibernate Search version 5.6.0.Alpha3 is now available!</a></span></li><li><span style="font-size: 10pt; line-height: 1.5em;"><a class="jive-link-external-small" href="http://teiid.blogspot.de/2016/03/teiid-90-alpha2-released.html" rel="nofollow">Teiid 9.0 Alpha2 Released</a></span></li></ul><div class="paragraph"><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><em>I hope this week's editorial has provided you with something of interest, please join us again next week when we will bring you more news from JBoss and the JBoss Communities.</em></p></div></div><!-- [DocumentBodyEnd:53608902-079c-4d3e-91f1-6b818dd120d9] -->]]></summary>
+	<content type="html">&lt;html&gt;&lt;!-- [DocumentBodyStart:53608902-079c-4d3e-91f1-6b818dd120d9] --&gt;&lt;body&gt;&lt;div&gt;&lt;p&gt;&lt;span&gt;&lt;em&gt;If spring has yet to come to us (at least in Europe), there is a definitly a feeling of "waking up", all over the community. Projects are releasing, as they always do, but important milestones are coming - and with them, the release of crucial and exciting features...&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;h1&gt;&lt;span&gt;Waking up the bear&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div&gt;&lt;a href="https://www.flickr.com/photos/120374925@N06/15181578762/in/photolist-p8xyrY-mEK4D2-tj2LWQ-cCDY2J-71KH5k-6X9tLn-dETF85-qNAp1e-bWyEz6-8kJKeQ-qYdo6a-d6oL4j-2GNw9w-5ngARR-czRneJ-GW7TX-daf8FW-c2LmS1-3EFj5x-6XdtvC-uCmH6h-8eXFpx-dELqiH-rfFg9v-8eXJRP-6LTfdv-45tCP3-c1WFs7-57gMxA-8ksRVd-87jK4f-5JJYwn-uFEXJ-9NTBMQ-ofT9A7-314PrR-8eXHxF-6wV44J-6xq7CY-9e2Hwz-cQbd8N-f2NLZa-bWhNhL-4eNaqs-9R41Ly-5qgX4T-oFSaKH-oscv9H-7UZd3-dek1qV" rel="nofollow" target="_blank"&gt;&lt;img alt="brown bear at Skansen3-3" height="253" src="https://farm4.staticflickr.com/3878/15181578762_72e12fc20e_n.jpg" width="320"&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The Hibernate community has grown over the border of the Hibernate framework for a long time now. Numerous projects, like the &lt;a href="http://in.relation.to/2016/03/14/hibernate-orm-509-final-release/" rel="nofollow" target="_blank"&gt;Hibernate ORM (which just released 5.0.9.Final) &lt;/a&gt;&lt;span&gt;and &lt;/span&gt;&lt;span&gt;&lt;a href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow" target="_blank"&gt;Hibernate Search (which just 5.6.0.Alpha3)&lt;/a&gt; &lt;/span&gt;&lt;span&gt;are part of this blooming community.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Thus it was decided to set up a dedicated &lt;/span&gt;&lt;a href="http://in.relation.to/2016/03/14/hibernate-community-newsletter-2016-6/" rel="nofollow" target="_blank"&gt;Hibernate Community Newsletter&lt;/a&gt;&lt;span&gt;, to allow people interest by all (or most) of those projects, to easily follow their activities.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;In the Eye of the Hawkular&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div&gt;&lt;a href="https://www.flickr.com/photos/carlhaynes13/3919823409/in/photolist-6Yo7We-7tNWFT-3hETZ8-cCYTu1-9ULrqo-bcgshT-b8EcL4-jduvsj-fo4we1-aaUQYo-oatQzS-qTbi5V-3hKa6E-9ECzuX-dHN2Sn-k8b6A9-9ECzrr-DTL9au-9ca5Ts-9q816p-fRRnf3-biDt1H-47PSTr-cF6eEC-oZkHMr-eXQ81P-6nzva1-dTdwfB-biDq96-8K9Pvc-foG7qx-qaSJ1a-bddVe8-8npUL4-a64d85-B1RoM-9ca4tN-5absco-A8Xsq8-dgMdUH-a31RuE-fCYHsT-dQe9Mx-6opKUR-aPRgq6-C74b55-qQ2MMq-d8fvjh-A7onp-dGUYqA" rel="nofollow" target="_blank"&gt;&lt;img alt="Hawk" height="180" src="https://farm4.staticflickr.com/3473/3919823409_a50d64da1d_m.jpg" width="240"&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;On top of releasing the &lt;a href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow" target="_blank"&gt;1.0.0.Alpha11&lt;/a&gt;, which is getting the project closer and closer to the 1.0.0 milestone, Hawkular team took the time to produce a &lt;a href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow" target="_blank"&gt;Hawkular features overview (1.0.0.Alpha11&lt;/a&gt;). The article covers quickly how Hawkular can (graphically) monitor business transactions or application performance, alongside dealing with management operations and artifacts deployments.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Also, to show how flexible and extendable the project is, one of the developer, Heiko Rupp, produced a very intriguing blog entry on &lt;a href="http://pilhuhn.blogspot.de/2016/03/reacting-on-iot-data-with-hawkular.html" rel="nofollow" target="_blank"&gt;Reacting on IoT data with Hawkular&lt;/a&gt;&lt;span&gt;. This new article is a follow up on his previous ones on&lt;/span&gt;&lt;a href="http://pilhuhn.blogspot.com/2016/02/sending-iot-sensor-data-to-hawkular.html" rel="nofollow" target="_blank"&gt; Sending IoT sensor data to Hawkular-Metrics via MQTT&lt;/a&gt;&lt;span&gt; and &lt;/span&gt;&lt;a href="http://pilhuhn.blogspot.com/2016/02/send-iot-data-to-hawkular-full.html" rel="nofollow" target="_blank"&gt;Send IoT data to Hawkular-full&lt;/a&gt;&lt;span&gt; and all of them certainly forms an exciting testimony to the possibility offered by Hawkular.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2&gt;Evangelist's Corner&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Last week, Christina has released the part four of a her &lt;a href="http://wei-meilin.blogspot.de/2016/03/fuse-integration-service-auto_15.html" rel="nofollow" target="_blank"&gt;Fuse Integration Service demo on"Auto Dealership Management"&lt;/a&gt;&lt;/p&gt;&lt;p&gt;and, as always, Eric D. Schabell has been quite prolific and produced a guide on &lt;a href="http://www.schabell.org/2016/03/installing-redhat-cdk-beta-5-release.html" rel="nofollow" target="_blank"&gt;Installing the Red Hat Container Development Kit (CDK)&lt;/a&gt;&lt;span&gt;, but also take the time to answer some questions on &lt;/span&gt;&lt;a href="http://www.schabell.org/2016/03/openshift-profiles-interview-eric-d-schabell.html" rel="nofollow" target="_blank"&gt;OpenShift Profiles (An interview with Eric D. Schabell)&lt;/a&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;&lt;br&gt;Events&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Worth to mention here is certainly the opening of the &lt;a href="http://rivieradev.fr/cfp" rel="nofollow" target="_blank"&gt;Call For Paper - Riveria Dev&lt;/a&gt;, &lt;span&gt;a conference located in the south of France, at Sophia-Antipolis, on the 16 and 17 June. The CfP itself closes on the 30th April. If you have the chance to be able to apply or attend, please do so, I only hear good things about this event !&lt;/span&gt;&lt;/p&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h2&gt;Releases, releases, releases...&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The JBoss community would not be as thriving as it is, if it were not to release as often as it does. Thus, this week is again having its fair share of interesting releases:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://forge.jboss.org/news/forge-3.0.0.final-is-here" rel="nofollow" target="_blank"&gt;JBoss Forge 3.0.0 Final&lt;/a&gt; and already &lt;a href="http://forge.jboss.org/news/forge-3.0.1.final-is-here" rel="nofollow" target="_blank"&gt;JBoss Forge 3.0.1 Final&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://blog.infinispan.org/2016/03/infinispan-hadoop-connector-02-released.html" rel="nofollow" target="_blank"&gt;Infinispan Hadoop connector 0.2 released!&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://in.relation.to/2016/03/14/hibernate-orm-509-final-release/" rel="nofollow" target="_blank"&gt;Hibernate ORM 5.0.9.Final&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="http://www.hawkular.org/blog/2016/03/15/hawkular-1.0.0.Alpha11-released.html" rel="nofollow" target="_blank"&gt;Hawkular released 1.0.0.Alpha11&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;a href="http://in.relation.to/2016/03/17/ThirdAlphaElasticsearch/" rel="nofollow" target="_blank"&gt;Hibernate Search version 5.6.0.Alpha3 is now available!&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;a href="http://teiid.blogspot.de/2016/03/teiid-90-alpha2-released.html" rel="nofollow" target="_blank"&gt;Teiid 9.0 Alpha2 Released&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I hope this week's editorial has provided you with something of interest, please join us again next week when we will bring you more news from JBoss and the JBoss Communities.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- [DocumentBodyEnd:53608902-079c-4d3e-91f1-6b818dd120d9] --&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/wAdsLEFxP7E" height="1" width="1" alt=""/&gt;</content>
+	<updated>2016-03-18T18:07:26+00:00</updated>
+	<author><name>Romain Pelisse</name></author>
+	<source>
+		<link rel="self" href="http://community.jboss.org/blogs/weekly-editorial/feeds/" />
+		<title>Weekly Editorial</title></source>
+
+
+<feedburner:origLink>https://developer.jboss.org/blogs/weekly-editorial/2016/03/18/this-week-in-jboss-18th-march-2016-bears-and-hawks-are-waking-up</feedburner:origLink></entry>
+
+
+</feed><!-- vim:ft=xml
+	  -->

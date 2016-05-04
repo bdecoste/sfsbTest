@@ -245,9 +245,9 @@ public class SfsbServlet extends HttpServlet {
     	//viewJndi(jndiContext, "queue");
     	//viewJndi(jndiContext, "ejb");
     	
-    	TimerRemote timer = (TimerRemote)jndiContext.lookup("ejb:/sfsbTest/TimerBean!org.jboss.jndiTest.TimerRemote");
-    	if (!timer.checkTimerStatus())
-    		timer.startTimer();
+    	//TimerRemote timer = (TimerRemote)jndiContext.lookup("ejb:/sfsbTest/TimerBean!org.jboss.jndiTest.TimerRemote");
+    	//if (!timer.checkTimerStatus())
+    	//	timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
     	//System.out.println("HTTPSession state " + state);
