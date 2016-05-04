@@ -295,10 +295,10 @@ public class SfsbServlet extends HttpServlet {
     	long value = System.currentTimeMillis();
     	TestEntity entity = tester.findEntity(id);
     	if (entity == null) {
-    		System.out.println("Creating entity " + value);
+    		System.out.println("Creating entity " + id + " " + value);
     		entity = tester.createEntity(id, value);
     	} else {
-    		System.out.println("found entity " + entity.getValue());
+    		System.out.println("found entity " + id + " " + entity.getValue());
     	}
     	
  //   	JmsClient sm = new JmsClient(remoting);
