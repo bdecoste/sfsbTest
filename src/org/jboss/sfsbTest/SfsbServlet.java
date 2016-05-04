@@ -250,7 +250,7 @@ public class SfsbServlet extends HttpServlet {
     	//	timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
-    	System.out.println("HTTPSession state " + state);
+    	//System.out.println("HTTPSession state " + state);
    // 	if (state == null){
 	    	session.setAttribute(STATE, MODIFIED + System.currentTimeMillis());
    // 	}
@@ -280,11 +280,11 @@ public class SfsbServlet extends HttpServlet {
     	//	stateless.call();
     	//}
 	
-    	System.out.println("State1 " + sfsb.getState());
+    	//System.out.println("State1 " + sfsb.getState());
     	sfsb.setState("MODIFIED " + System.currentTimeMillis());
-    	System.out.println("State2 " + sfsb.getState());
+    	//System.out.println("State2 " + sfsb.getState());
     	
-/*    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
+    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
     	
     	Long id = (Long)session.getAttribute(KEY);
@@ -295,11 +295,11 @@ public class SfsbServlet extends HttpServlet {
     	long value = System.currentTimeMillis();
     	TestEntity entity = tester.findEntity(id);
     	if (entity == null) {
-    		//System.out.println("Creating entity " + value);
+    		System.out.println("Creating entity " + value);
     		entity = tester.createEntity(id, value);
     	} else {
-    		//System.out.println("found entity " + entity.getValue());
-    	}*/
+    		System.out.println("found entity " + entity.getValue());
+    	}
     	
  //   	JmsClient sm = new JmsClient(remoting);
  //       String msg = "Testing123";
