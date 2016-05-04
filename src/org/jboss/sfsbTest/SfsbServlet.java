@@ -250,7 +250,7 @@ public class SfsbServlet extends HttpServlet {
     	//	timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
-    	//System.out.println("HTTPSession state " + state);
+    	System.out.println("HTTPSession state " + state);
    // 	if (state == null){
 	    	session.setAttribute(STATE, MODIFIED + System.currentTimeMillis());
    // 	}
@@ -273,16 +273,16 @@ public class SfsbServlet extends HttpServlet {
     	StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
     	//System.out.println("local bean " + local);
     	
-    	jndiBinding = "ejb:/sfsbTest/StatelessBean1!org.jboss.jndiTest.StatelessBean1Remote";
-    	StatelessBean1Remote stateless = (StatelessBean1Remote) jndiContext.lookup(jndiBinding);
+    	//jndiBinding = "ejb:/sfsbTest/StatelessBean1!org.jboss.jndiTest.StatelessBean1Remote";
+    	//StatelessBean1Remote stateless = (StatelessBean1Remote) jndiContext.lookup(jndiBinding);
     	//System.out.println("stateless bean " + stateless);
-    	for (int i = 0 ; i < 5 ; ++i){
-    		stateless.call();
-    	}
+    	//for (int i = 0 ; i < 5 ; ++i){
+    	//	stateless.call();
+    	//}
 	
-    	//System.out.println("State1 " + sfsb.getState());
+    	System.out.println("State1 " + sfsb.getState());
     	sfsb.setState("MODIFIED " + System.currentTimeMillis());
-    	//System.out.println("State2 " + sfsb.getState());
+    	System.out.println("State2 " + sfsb.getState());
     	
 /*    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
