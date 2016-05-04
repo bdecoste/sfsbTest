@@ -251,13 +251,13 @@ public class SfsbServlet extends HttpServlet {
     	//	timer.startTimer();
     	
     	String state = (String)session.getAttribute(STATE);
-    	//System.out.println("HTTPSession state " + state);
+    	System.out.println("HTTPSession state " + state);
    // 	if (state == null){
 	    	session.setAttribute(STATE, MODIFIED + System.currentTimeMillis());
    // 	}
     	
     	StatefulBean1Remote sfsb = (StatefulBean1Remote)session.getAttribute(SFSB);
-    	//System.out.println("HTTPSession sfsb " + sfsb);
+    	System.out.println("HTTPSession sfsb " + sfsb);
     	
     	if (sfsb == null) {
     		String jndiBinding = "ejb:/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Remote?stateful";
@@ -270,8 +270,8 @@ public class SfsbServlet extends HttpServlet {
     		remote.setState("REMOTE " + System.currentTimeMillis());
     	}
     	
-    	String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
-    	StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
+    	//String jndiBinding = "java:global/sfsbTest/StatefulBean1!org.jboss.jndiTest.StatefulBean1Local";
+    	//StatefulBean1Local local = (StatefulBean1Local) jndiContext.lookup(jndiBinding);
     	//System.out.println("local bean " + local);
     	
     	//jndiBinding = "ejb:/sfsbTest/StatelessBean1!org.jboss.jndiTest.StatelessBean1Remote";
@@ -285,12 +285,12 @@ public class SfsbServlet extends HttpServlet {
     	sfsb.setState("MODIFIED " + System.currentTimeMillis());
     	//System.out.println("State2 " + sfsb.getState());
     	
-    	jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
+    	String jndiBinding = "java:global/sfsbTest/EntityTesterBean!org.jboss.jndiTest.EntityTester";
     	EntityTester tester = (EntityTester)jndiContext.lookup(jndiBinding);
     	
     	Long id = (Long)session.getAttribute(KEY);
     	if (id == null) {
-    		id = ENTITY_ID;
+    		id = System.currentTimeMillis();
     		session.setAttribute(KEY, id);
     	}
     	long value = System.currentTimeMillis();
