@@ -49,7 +49,7 @@ public class SfsbServlet extends HttpServlet {
 	private static final String KEY = "KEY";
 	private static final String STATE = "STATE";
 	private static final String SFSB = "SFSB";
-	private static final String MODIFIED = "MODIFIED";
+	private static final String MODIFIED = System.getenv("HOSTNAME");
  	private static final String AMQ_IP = "172.30.199.239";
 	
 	Logger LOG = Logger.getLogger(SfsbServlet.class); 
@@ -290,7 +290,7 @@ public class SfsbServlet extends HttpServlet {
     	
     	Long id = (Long)session.getAttribute(KEY);
     	if (id == null) {
-    		id = System.currentTimeMillis();
+    		id = ENTITY_ID;
     		session.setAttribute(KEY, id);
     	}
     	long value = System.currentTimeMillis();
@@ -301,6 +301,8 @@ public class SfsbServlet extends HttpServlet {
     	} else {
     		System.out.println("found entity " + id + " " + entity.getValue());
     	}
+    	
+    	entity.setValue(System.currentTimeMillis());
     	
  //   	JmsClient sm = new JmsClient(remoting);
  //       String msg = "Testing123";
