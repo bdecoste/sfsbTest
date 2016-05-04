@@ -45,6 +45,7 @@ import org.apache.log4j.*;
 public class SfsbServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	private static final long ENTITY_ID = 1234;
 	private static final String KEY = "KEY";
 	private static final String STATE = "STATE";
 	private static final String SFSB = "SFSB";
@@ -289,7 +290,7 @@ public class SfsbServlet extends HttpServlet {
     	
     	Long id = (Long)session.getAttribute(KEY);
     	if (id == null) {
-    		id = System.currentTimeMillis();
+    		id = ENTITY_ID;
     		session.setAttribute(KEY, id);
     	}
     	long value = System.currentTimeMillis();
