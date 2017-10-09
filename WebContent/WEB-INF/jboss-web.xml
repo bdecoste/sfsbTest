@@ -3,6 +3,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee jboss-web_7_0.xsd">
   <valve>
-      <class-name>org.apache.catalina.valves.AccessLogValve1</class-name>
+      <class-name>org.apache.catalina.valves.AccessLogValve</class-name>
   </valve>
 </jboss-web>
