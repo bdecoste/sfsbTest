@@ -2,7 +2,5 @@
         xmlns:jboss="http://www.jboss.com/xml/ns/javaee" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee jboss-web_7_0.xsd">
-  <valve>
-      <class-name>org.apache.catalina.valves.AccessLogValve</class-name>
-  </valve>
+  <valve><class-name>org.jboss.openshift.valves.StdoutAccessLogValve</class-name><module>org.jboss.openshift</module><param><param-name>pattern</param-name><param-value>%h %l %u %t %{X-Forwarded-Host}i \&quot;%r\&quot; %s %b</param-value></param></valve>
 </jboss-web>
